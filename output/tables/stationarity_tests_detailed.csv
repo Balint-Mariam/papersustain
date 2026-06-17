@@ -29,9 +29,9 @@ data_model_diff,IP_growth,Phillips-Perron,unit root,-12.104048465731427,1.987793
 data_model_diff,IP_growth,KPSS,stationarity around a constant,0.09067786344411045,0.1,24,145,Fail to reject stationarity at 5%,"The test statistic is outside of the range of p-values available in the
 look-up table. The actual p-value is greater than the p-value returned.
 ",0.739,0.463,0.347
-data_model_diff,Bund2Y_change_bps,ADF,unit root,-11.809357276158401,8.936928428302814e-22,0,144,Reject unit root; stationary at 5%,,-3.476597917537401,-2.8818291230495543,-2.5775887982253085
-data_model_diff,Bund2Y_change_bps,Phillips-Perron,unit root,-12.679238279967196,1.1969972535505225e-23,14,144,Reject unit root; stationary at 5%,,-3.476597917537401,-2.8818291230495543,-2.5775887982253085
-data_model_diff,Bund2Y_change_bps,KPSS,stationarity around a constant,0.315729915010829,0.1,4,145,Fail to reject stationarity at 5%,"The test statistic is outside of the range of p-values available in the
+data_model_diff,Bund2Y_change,ADF,unit root,-11.809357276158362,8.93692842830442e-22,0,144,Reject unit root; stationary at 5%,,-3.476597917537401,-2.8818291230495543,-2.5775887982253085
+data_model_diff,Bund2Y_change,Phillips-Perron,unit root,-12.679238279967175,1.1969972535506418e-23,14,144,Reject unit root; stationary at 5%,,-3.476597917537401,-2.8818291230495543,-2.5775887982253085
+data_model_diff,Bund2Y_change,KPSS,stationarity around a constant,0.31572991501082215,0.1,4,145,Fail to reject stationarity at 5%,"The test statistic is outside of the range of p-values available in the
 look-up table. The actual p-value is greater than the p-value returned.
 ",0.739,0.463,0.347
 data_model_diff,CISS_change,ADF,unit root,-11.292051725007479,1.3721355447529522e-20,1,143,Reject unit root; stationary at 5%,,-3.4769274060112707,-2.8819726324025625,-2.577665408088415

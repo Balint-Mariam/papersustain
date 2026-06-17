@@ -371,8 +371,8 @@ def special_correlation_pairs(correlation: pd.DataFrame, dataset: str, method: s
         ("TTF - Brent", "TTF_ret", "Brent_ret"),
         ("Power - CPI", "Power_ret", "CPI_yoy_change"),
         ("Power - CPI", "Power_ret", "CPI_yoy_level"),
-        ("CPI - Bund 2Y", "CPI_yoy_change", "Bund2Y_change_bps"),
-        ("CPI - Bund 2Y", "CPI_yoy_level", "Bund2Y_change_bps"),
+        ("CPI - Bund 2Y", "CPI_yoy_change", "Bund2Y_change"),
+        ("CPI - Bund 2Y", "CPI_yoy_level", "Bund2Y_change"),
         ("Green equity - green bond", "GreenEquity_relative", "GreenBond_relative"),
     ]
     rows: list[dict[str, object]] = []
@@ -614,8 +614,8 @@ Audit warnings:
 - Log returns are stored in decimal form. A value of `0.05` means approximately `5%`.
 - `EUA_ret`, `TTF_ret`, `Brent_ret`, and `Power_ret`: monthly log returns in decimal form.
 - `IP_growth`: approximate monthly industrial production growth in decimal form.
-- `Bund 2Y` is read from Excel as a decimal yield fraction in this file, for example `0.03198` means `3.198%`.
-- `Bund2Y_change_bps`: monthly change in basis points. The conversion multiplier is documented in `output/tables/bund2y_diagnostics.csv`.
+- `Bund 2Y` is kept on the original numeric scale from Excel, for example `0.03198`.
+- `Bund2Y_change`: signed raw first difference. For example, `0.00158` to `0.00140` gives `-0.00018`.
 - `CPI_yoy_level`: annual inflation rate; `CPI_yoy_change`: monthly change in that annual inflation rate, in percentage points.
 - `CISS_level`: systemic stress index level; `CISS_change`: monthly change in systemic stress.
 - `GreenEquity_relative`: relative performance proxy versus the European broad equity market.
@@ -688,7 +688,7 @@ Condition number diagnostics:
 
 ## Recommendation for the BVAR Stage
 
-The recommended main candidate set is `data_processed/data_model_diff.csv`. It uses log returns, first differences, and basis-point changes as requested, while preserving decimal log-return units. `data_processed/data_model_levels.csv` should be kept for stationarity comparison and robustness checks involving CPI and CISS levels.
+The recommended main candidate set is `data_processed/data_model_diff.csv`. It uses log returns and first differences while preserving the numeric scale of each transformed series. `data_processed/data_model_levels.csv` should be kept for stationarity comparison and robustness checks involving CPI and CISS levels.
 
 No VAR, BVAR, BVAR-SV, BSVAR, or BSVAR-SV model is estimated in this stage. No structural-break tests are run.
 """

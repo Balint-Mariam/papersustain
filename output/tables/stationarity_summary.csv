@@ -5,7 +5,7 @@ data_model_diff,Brent_ret,Reject unit root; stationary at 5%,Reject unit root; s
 data_model_diff,Power_ret,Reject unit root; stationary at 5%,Reject unit root; stationary at 5%,Fail to reject stationarity at 5%,CLEARLY_STATIONARY,Retain in the candidate set.
 data_model_diff,CPI_yoy_change,Reject unit root; stationary at 5%,Reject unit root; stationary at 5%,Fail to reject stationarity at 5%,CLEARLY_STATIONARY,Retain in the candidate set.
 data_model_diff,IP_growth,Reject unit root; stationary at 5%,Reject unit root; stationary at 5%,Fail to reject stationarity at 5%,CLEARLY_STATIONARY,Retain in the candidate set.
-data_model_diff,Bund2Y_change_bps,Reject unit root; stationary at 5%,Reject unit root; stationary at 5%,Fail to reject stationarity at 5%,CLEARLY_STATIONARY,Retain in the candidate set.
+data_model_diff,Bund2Y_change,Reject unit root; stationary at 5%,Reject unit root; stationary at 5%,Fail to reject stationarity at 5%,CLEARLY_STATIONARY,Retain in the candidate set.
 data_model_diff,CISS_change,Reject unit root; stationary at 5%,Reject unit root; stationary at 5%,Fail to reject stationarity at 5%,CLEARLY_STATIONARY,Retain in the candidate set.
 data_model_diff,GreenEquity_relative,Reject unit root; stationary at 5%,Reject unit root; stationary at 5%,Fail to reject stationarity at 5%,CLEARLY_STATIONARY,Retain in the candidate set.
 data_model_diff,GreenBond_relative,Reject unit root; stationary at 5%,Reject unit root; stationary at 5%,Fail to reject stationarity at 5%,CLEARLY_STATIONARY,Retain in the candidate set.
