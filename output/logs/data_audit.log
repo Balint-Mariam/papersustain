@@ -1,0 +1,17 @@
+Data audit started.
+Input workbook: date sustain.xlsx
+Input sheet: value
+Workbook sheets: ['value']
+Dates are ordered chronologically.
+No duplicate dates, duplicate months, or internal missing months found.
+Missing numeric values: 0
+Infinite numeric values: 0
+Zero numeric values: 1
+Negative numeric values: 99
+WARNING: Zero values exist in the raw data.
+WARNING: Negative values exist in the raw data.
+No rows removed for the common complete sample.
+Raw rows audited: 146
+Clean common-sample rows saved: 146
+Sample period: 2014-03-31 to 2026-04-30
+Data audit completed successfully.

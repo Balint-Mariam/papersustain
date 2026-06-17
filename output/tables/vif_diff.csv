@@ -1,0 +1,11 @@
+dataset,variable,r_squared,tolerance,vif,classification,note
+data_model_diff,EUA_ret,0.19362339616157054,0.8063766038384295,1.2401153446663813,low,VIF is a static diagnostic and is not a definitive exclusion criterion for a shrinkage BVAR.
+data_model_diff,TTF_ret,0.14921908778725013,0.8507809122127499,1.1753907329669095,low,VIF is a static diagnostic and is not a definitive exclusion criterion for a shrinkage BVAR.
+data_model_diff,Brent_ret,0.3424747253878391,0.6575252746121609,1.520854085175428,low,VIF is a static diagnostic and is not a definitive exclusion criterion for a shrinkage BVAR.
+data_model_diff,Power_ret,0.1586287545954872,0.8413712454045128,1.1885359827328328,low,VIF is a static diagnostic and is not a definitive exclusion criterion for a shrinkage BVAR.
+data_model_diff,CPI_yoy_change,0.19245227002463128,0.8075477299753687,1.2383168980370998,low,VIF is a static diagnostic and is not a definitive exclusion criterion for a shrinkage BVAR.
+data_model_diff,IP_growth,0.10415542246885812,0.8958445775311419,1.1162650587849736,low,VIF is a static diagnostic and is not a definitive exclusion criterion for a shrinkage BVAR.
+data_model_diff,Bund2Y_change_bps,0.08628420750995724,0.9137157924900428,1.0944322164716196,low,VIF is a static diagnostic and is not a definitive exclusion criterion for a shrinkage BVAR.
+data_model_diff,CISS_change,0.2766161813045648,0.7233838186954352,1.3823919946169378,low,VIF is a static diagnostic and is not a definitive exclusion criterion for a shrinkage BVAR.
+data_model_diff,GreenEquity_relative,0.013208733919232052,0.986791266080768,1.013385539954861,low,VIF is a static diagnostic and is not a definitive exclusion criterion for a shrinkage BVAR.
+data_model_diff,GreenBond_relative,0.12406672633623939,0.8759332736637606,1.1416394719398046,low,VIF is a static diagnostic and is not a definitive exclusion criterion for a shrinkage BVAR.
