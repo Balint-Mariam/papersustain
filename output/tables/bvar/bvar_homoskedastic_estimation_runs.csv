@@ -1,0 +1,6 @@
+model_id,lag,variance_type,run_type,chain,seed,burnin,draws,thin,elapsed_seconds,file
+BVAR-HOM-p1-pilot,1,homoskedastic,pilot,NA,20261,2000,2000,1,3.9352169036865234,output/models/bvar_hom_p1_pilot.rds
+BVAR-HOM-p2-pilot,2,homoskedastic,pilot,NA,20262,2000,2000,1,9.80267882347107,output/models/bvar_hom_p2_pilot.rds
+BVAR-HOM-final-chain1,1,homoskedastic,final,1,20261,10000,10000,1,19.264161109924316,output/models/bvar_hom_final_chain1.rds
+BVAR-HOM-final-chain2,1,homoskedastic,final,2,20262,10000,10000,1,20.164067029953003,output/models/bvar_hom_final_chain2.rds
+BVAR-HOM-final-chain3,1,homoskedastic,final,3,20263,10000,10000,1,20.417908906936646,output/models/bvar_hom_final_chain3.rds

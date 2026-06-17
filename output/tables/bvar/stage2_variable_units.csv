@@ -1,0 +1,11 @@
+variable,unit,transformed_again_in_stage2
+EUA_ret,"Log return, decimal form",FALSE
+TTF_ret,"Log return, decimal form",FALSE
+Brent_ret,"Log return, decimal form",FALSE
+Power_ret,"Log return, decimal form",FALSE
+CPI_yoy_change,Percentage-point first difference,FALSE
+IP_growth,"Log growth, decimal form",FALSE
+Bund2Y_change,"Raw first difference, original Bund 2Y scale",FALSE
+CISS_change,Index first difference,FALSE
+GreenEquity_relative,"Relative log return, decimal form",FALSE
+GreenBond_relative,"Relative log return, decimal form",FALSE

@@ -1,0 +1,2 @@
+p_candidate_from_lag_selection,p_recommended_for_next_stage,homoskedastic_preferred,sv_preferred,variance_recommendation,sv_green_lpl_gap_vs_best_hom,recommendation
+1,1,BVAR-HOM-p2,BVAR-SV-p1,BVAR-SV,26.067413944683068,"Use BVAR-SV with p = 1 as the reduced-form candidate for the structural stage, subject to reviewing diagnostics."

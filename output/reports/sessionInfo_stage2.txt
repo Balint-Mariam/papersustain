@@ -1,0 +1,43 @@
+R version 4.4.2 (2024-10-31 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 26200)
+
+Matrix products: default
+
+
+locale:
+[1] LC_COLLATE=English_Europe.utf8  LC_CTYPE=English_Europe.utf8   
+[3] LC_MONETARY=English_Europe.utf8 LC_NUMERIC=C                   
+[5] LC_TIME=English_Europe.utf8    
+
+time zone: Europe/Bucharest
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] patchwork_1.3.0    moments_0.14.1     tseries_0.10-58    forecast_9.0.2    
+ [5] coda_0.19-4.1      posterior_1.7.0    bayesianVARs_0.1.8 vars_1.6-1        
+ [9] lmtest_0.9-40      urca_1.3-4         strucchange_1.5-4  sandwich_3.1-1    
+[13] zoo_1.8-15         MASS_7.3-61        ggplot2_4.0.1      tidyr_1.3.1       
+[17] dplyr_1.1.4        readr_2.1.5       
+
+loaded via a namespace (and not attached):
+ [1] tensorA_0.36.2.1     generics_0.1.3       GIGrvg_0.8          
+ [4] factorstochvol_1.1.2 lattice_0.22-6       hms_1.1.3           
+ [7] magrittr_2.0.3       grid_4.4.2           RColorBrewer_1.1-3  
+[10] backports_1.5.0      purrr_1.0.4          scales_1.4.0        
+[13] abind_1.4-8          cli_3.6.4            rlang_1.1.5         
+[16] crayon_1.5.3         bit64_4.6.0-1        withr_3.0.2         
+[19] corrplot_0.95        tools_4.4.2          parallel_4.4.2      
+[22] tzdb_0.5.0           checkmate_2.3.2      colorspace_2.1-1    
+[25] curl_7.0.0           vctrs_0.6.5          R6_2.6.1            
+[28] lifecycle_1.0.4      bit_4.6.0            vroom_1.6.5         
+[31] pkgconfig_2.0.3      stochvol_3.2.9       pillar_1.10.1       
+[34] gtable_0.3.6         quantmod_0.4.26      glue_1.8.0          
+[37] Rcpp_1.1.1           tibble_3.2.1         tidyselect_1.2.1    
+[40] farver_2.1.2         nlme_3.1-166         xts_0.14.2          
+[43] timeDate_4052.112    fracdiff_1.5-3       compiler_4.4.2      
+[46] quadprog_1.5-8       S7_0.2.1             TTR_0.24.4          
+[49] distributional_0.7.1

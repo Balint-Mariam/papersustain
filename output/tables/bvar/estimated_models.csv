@@ -1,0 +1,15 @@
+model_id,lag,variance_type,run_type,chain,seed,burnin,draws,thin,elapsed_seconds,file
+BVAR-HOM-p1-pilot,1,homoskedastic,pilot,NA,20261,2000,2000,1,3.935216903686523,output/models/bvar_hom_p1_pilot.rds
+BVAR-HOM-p2-pilot,2,homoskedastic,pilot,NA,20262,2000,2000,1,9.80267882347107,output/models/bvar_hom_p2_pilot.rds
+BVAR-HOM-final-chain1,1,homoskedastic,final,1,20261,10000,10000,1,19.264161109924316,output/models/bvar_hom_final_chain1.rds
+BVAR-HOM-final-chain2,1,homoskedastic,final,2,20262,10000,10000,1,20.164067029953003,output/models/bvar_hom_final_chain2.rds
+BVAR-HOM-final-chain3,1,homoskedastic,final,3,20263,10000,10000,1,20.41790890693665,output/models/bvar_hom_final_chain3.rds
+BVAR-SV-p1-pilot,1,sv,pilot,NA,20361,2000,2000,1,8.654885053634644,output/models/bvar_sv_p1_pilot.rds
+BVAR-SV-p2-pilot,2,sv,pilot,NA,20362,2000,2000,1,14.709797859191896,output/models/bvar_sv_p2_pilot.rds
+BVAR-SV-final-chain1,1,sv,final,1,20361,10000,10000,1,38.108253955841064,output/models/bvar_sv_final_chain1.rds
+BVAR-SV-final-chain2,1,sv,final,2,20362,10000,10000,1,38.11475706100464,output/models/bvar_sv_final_chain2.rds
+BVAR-SV-final-chain3,1,sv,final,3,20363,10000,10000,1,41.61923408508301,output/models/bvar_sv_final_chain3.rds
+BVAR-HOM-p1-forecast,1,homoskedastic,forecast,NA,30001,5000,5000,1,9.036419153213501,output/models/bvar_hom_p1_forecast_train.rds
+BVAR-HOM-p2-forecast,2,homoskedastic,forecast,NA,30002,5000,5000,1,23.2933669090271,output/models/bvar_hom_p2_forecast_train.rds
+BVAR-SV-p1-forecast,1,sv,forecast,NA,30101,5000,5000,1,17.23990488052368,output/models/bvar_sv_p1_forecast_train.rds
+BVAR-SV-p2-forecast,2,sv,forecast,NA,30102,5000,5000,1,41.83261013031006,output/models/bvar_sv_p2_forecast_train.rds

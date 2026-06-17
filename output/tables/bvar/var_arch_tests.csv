@@ -1,0 +1,3 @@
+model,lag_order,test_lag,statistic,parameter,p_value,warning,test
+VAR(1),1,6,7590,18150,1,,Multivariate ARCH
+VAR(2),2,6,7535,18150,1,,Multivariate ARCH

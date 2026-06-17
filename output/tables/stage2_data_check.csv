@@ -1,0 +1,12 @@
+check,status,detail,value
+file_exists,PASS,data_processed/data_model_diff.csv,NA
+model_variable_order,PASS,EUA_ret | TTF_ret | Brent_ret | Power_ret | CPI_yoy_change | IP_growth | Bund2Y_change | CISS_change | GreenEquity_relative | GreenBond_relative,NA
+duplicate_dates,PASS,No duplicate dates,NA
+chronological_order,PASS,Dates sorted ascending,NA
+numeric_columns,PASS,All model columns are numeric,NA
+missing_values,PASS,No NA values,0
+finite_values,PASS,No infinite values,0
+observations,PASS,145,NA
+rank,PASS,10,columns=10
+zero_variance,PASS,,NA
+bund_scale,PASS,Bund 2Y first difference kept on raw numeric scale,Bund2Y_change

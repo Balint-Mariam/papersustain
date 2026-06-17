@@ -1,0 +1,5 @@
+criterion,recommended_lag,p_candidate_for_bvar,selection_note
+AIC(n),1,1,"BVAR estimation is restricted to p=1 and p=2. Candidate lag prioritizes parsimony, SC/BIC, HQ, stability, residual diagnostics, and predictive evaluation."
+HQ(n),1,1,"BVAR estimation is restricted to p=1 and p=2. Candidate lag prioritizes parsimony, SC/BIC, HQ, stability, residual diagnostics, and predictive evaluation."
+SC(n),1,1,"BVAR estimation is restricted to p=1 and p=2. Candidate lag prioritizes parsimony, SC/BIC, HQ, stability, residual diagnostics, and predictive evaluation."
+FPE(n),1,1,"BVAR estimation is restricted to p=1 and p=2. Candidate lag prioritizes parsimony, SC/BIC, HQ, stability, residual diagnostics, and predictive evaluation."

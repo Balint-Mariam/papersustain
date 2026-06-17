@@ -1,0 +1,11 @@
+model_id,lag,coefficient_prior_function,coefficient_prior,coefficient_priormean,intercept_prior_sd,sigma_prior_function,sigma_type,cholesky_U_prior,cholesky_heteroscedastic,sv_keep,variance_type
+BVAR-HOM-p1-pilot,1,specify_prior_phi,HMP,0,10,specify_prior_sigma,cholesky,HMP,FALSE,last,homoskedastic
+BVAR-HOM-p2-pilot,2,specify_prior_phi,HMP,0,10,specify_prior_sigma,cholesky,HMP,FALSE,last,homoskedastic
+BVAR-HOM-final-chain1,1,specify_prior_phi,HMP,0,10,specify_prior_sigma,cholesky,HMP,FALSE,last,homoskedastic
+BVAR-HOM-final-chain2,1,specify_prior_phi,HMP,0,10,specify_prior_sigma,cholesky,HMP,FALSE,last,homoskedastic
+BVAR-HOM-final-chain3,1,specify_prior_phi,HMP,0,10,specify_prior_sigma,cholesky,HMP,FALSE,last,homoskedastic
+BVAR-SV-p1-pilot,1,specify_prior_phi,HMP,0,10,specify_prior_sigma,cholesky,HMP,TRUE,all,sv
+BVAR-SV-p2-pilot,2,specify_prior_phi,HMP,0,10,specify_prior_sigma,cholesky,HMP,TRUE,all,sv
+BVAR-SV-final-chain1,1,specify_prior_phi,HMP,0,10,specify_prior_sigma,cholesky,HMP,TRUE,all,sv
+BVAR-SV-final-chain2,1,specify_prior_phi,HMP,0,10,specify_prior_sigma,cholesky,HMP,TRUE,all,sv
+BVAR-SV-final-chain3,1,specify_prior_phi,HMP,0,10,specify_prior_sigma,cholesky,HMP,TRUE,all,sv
