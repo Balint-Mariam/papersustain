@@ -23,6 +23,7 @@ from analysis_common import (
 
 NONPOSITIVE_TABLE = TABLES_DIR / "nonpositive_log_values.csv"
 TRANSFORMATION_CHECKS = TABLES_DIR / "transformation_checks.csv"
+BUND2Y_DIAGNOSTICS = TABLES_DIR / "bund2y_diagnostics.csv"
 
 
 def report_nonpositive_values(df: pd.DataFrame) -> pd.DataFrame:
@@ -56,15 +57,53 @@ def check_log_requirements(df: pd.DataFrame) -> None:
     )
 
 
+def infer_bund2y_scale(series: pd.Series) -> tuple[str, float, str]:
+    clean = series.dropna().abs()
+    if clean.empty:
+        raise ValueError("Bund 2Y has no valid observations.")
+
+    if clean.max() < 0.25:
+        return (
+            "decimal_fraction",
+            10000.0,
+            "Values such as 0.03198 represent 3.198 percent; differences are multiplied by 10000 to obtain basis points.",
+        )
+
+    return (
+        "percentage_points",
+        100.0,
+        "Values are already expressed in percentage points; differences are multiplied by 100 to obtain basis points.",
+    )
+
+
+def bund2y_diagnostic_table(
+    df: pd.DataFrame,
+    scale_name: str,
+    multiplier: float,
+    note: str,
+) -> pd.DataFrame:
+    diagnostics = df[[DATE_COL, "Bund 2Y"]].copy()
+    diagnostics["Bund2Y_source_scale"] = scale_name
+    diagnostics["Bund2Y_level_percentage_points"] = (
+        diagnostics["Bund 2Y"] * 100 if scale_name == "decimal_fraction" else diagnostics["Bund 2Y"]
+    )
+    diagnostics["Bund2Y_monthly_change_raw"] = diagnostics["Bund 2Y"].diff()
+    diagnostics["Bund2Y_change_bps"] = diagnostics["Bund2Y_monthly_change_raw"] * multiplier
+    diagnostics["bps_multiplier_used"] = multiplier
+    diagnostics["diagnostic_note"] = note
+    return diagnostics
+
+
 def add_transformations(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     complete = df.copy()
+    bund_scale, bund_multiplier, bund_note = infer_bund2y_scale(df["Bund 2Y"])
 
     complete["EUA_ret"] = np.log(df["EUA"]).diff()
     complete["TTF_ret"] = np.log(df["TTF"]).diff()
     complete["Brent_ret"] = np.log(df["Brent"]).diff()
     complete["Power_ret"] = np.log(df["Power Energy Price"]).diff()
     complete["IP_growth"] = np.log(df["Industrial Production"]).diff()
-    complete["Bund2Y_change_bps"] = df["Bund 2Y"].diff() * 100
+    complete["Bund2Y_change_bps"] = df["Bund 2Y"].diff() * bund_multiplier
 
     complete["CPI_yoy_level"] = df["CPI EU"]
     complete["CPI_yoy_change"] = df["CPI EU"].diff()
@@ -85,12 +124,23 @@ def add_transformations(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     checks = pd.DataFrame(
         [
             {
+                "check": "Bund2Y_source_scale",
+                "max_abs_difference": np.nan,
+                "detail": bund_scale,
+            },
+            {
+                "check": "Bund2Y_bps_multiplier",
+                "max_abs_difference": np.nan,
+                "detail": bund_multiplier,
+            },
+            {
                 "check": "GreenEquity_relative_identity",
                 "max_abs_difference": (
                     complete["GreenEquity_relative"] - complete["GreenEquity_relative_check"]
                 )
                 .abs()
                 .max(),
+                "detail": "",
             },
             {
                 "check": "GreenBond_relative_identity",
@@ -99,9 +149,12 @@ def add_transformations(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
                 )
                 .abs()
                 .max(),
+                "detail": "",
             },
         ]
     )
+
+    save_csv(bund2y_diagnostic_table(df, bund_scale, bund_multiplier, bund_note), BUND2Y_DIAGNOSTICS)
 
     return complete, checks
 
@@ -147,8 +200,8 @@ def main() -> None:
     print(f"Saved {relative_path(DATA_MODEL_DIFF)} with {len(diff_df)} observations")
     print(f"Saved {relative_path(DATA_MODEL_LEVELS)} with {len(levels_df)} observations")
     print(f"Saved {relative_path(TRANSFORMATION_CHECKS)}")
+    print(f"Saved {relative_path(BUND2Y_DIAGNOSTICS)}")
 
 
 if __name__ == "__main__":
     main()
-

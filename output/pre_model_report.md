@@ -27,7 +27,8 @@ Audit warnings:
 - Log returns are stored in decimal form. A value of `0.05` means approximately `5%`.
 - `EUA_ret`, `TTF_ret`, `Brent_ret`, and `Power_ret`: monthly log returns in decimal form.
 - `IP_growth`: approximate monthly industrial production growth in decimal form.
-- `Bund2Y_change_bps`: monthly change in basis points.
+- `Bund 2Y` is read from Excel as a decimal yield fraction in this file, for example `0.03198` means `3.198%`.
+- `Bund2Y_change_bps`: monthly change in basis points. The conversion multiplier is documented in `output/tables/bund2y_diagnostics.csv`.
 - `CPI_yoy_level`: annual inflation rate; `CPI_yoy_change`: monthly change in that annual inflation rate, in percentage points.
 - `CISS_level`: systemic stress index level; `CISS_change`: monthly change in systemic stress.
 - `GreenEquity_relative`: relative performance proxy versus the European broad equity market.
@@ -35,6 +36,24 @@ Audit warnings:
 - The two relative returns are not pure green premia, pure green-screening effects, or causal estimates of a green label.
 
 Transformation identity checks are saved in `output/tables/transformation_checks.csv`.
+
+Bund 2Y scale diagnostic:
+
+```csv
+Date,Bund 2Y,Bund2Y_source_scale,Bund2Y_level_percentage_points,Bund2Y_monthly_change_raw,Bund2Y_change_bps,bps_multiplier_used,diagnostic_note
+2014-03-31,0.00158,decimal_fraction,0.158,,,10000.0,Values such as 0.03198 represent 3.198 percent; differences are multiplied by 10000 to obtain basis points.
+2014-04-30,0.0014,decimal_fraction,0.1399999999999999,-0.00018,-1.8000000000000005,10000.0,Values such as 0.03198 represent 3.198 percent; differences are multiplied by 10000 to obtain basis points.
+2014-05-31,0.00061,decimal_fraction,0.061,-0.00079,-7.9,10000.0,Values such as 0.03198 represent 3.198 percent; differences are multiplied by 10000 to obtain basis points.
+2014-06-30,0.00025,decimal_fraction,0.025,-0.0003599999999999,-3.6,10000.0,Values such as 0.03198 represent 3.198 percent; differences are multiplied by 10000 to obtain basis points.
+2014-07-31,0.0002199999999999,decimal_fraction,0.02199999999999,-3.000000000010001e-05,-0.3000000000010001,10000.0,Values such as 0.03198 represent 3.198 percent; differences are multiplied by 10000 to obtain basis points.
+2014-08-31,-0.00033,decimal_fraction,-0.033,-0.0005499999999999,-5.499999999999,10000.0,Values such as 0.03198 represent 3.198 percent; differences are multiplied by 10000 to obtain basis points.
+2014-09-30,-0.00083,decimal_fraction,-0.083,-0.0005,-5.0,10000.0,Values such as 0.03198 represent 3.198 percent; differences are multiplied by 10000 to obtain basis points.
+2014-10-31,-0.00058,decimal_fraction,-0.058,0.00025,2.5,10000.0,Values such as 0.03198 represent 3.198 percent; differences are multiplied by 10000 to obtain basis points.
+2014-11-30,-0.00034,decimal_fraction,-0.034,0.0002399999999999,2.4,10000.0,Values such as 0.03198 represent 3.198 percent; differences are multiplied by 10000 to obtain basis points.
+2014-12-31,-0.0011,decimal_fraction,-0.11,-0.00076,-7.6,10000.0,Values such as 0.03198 represent 3.198 percent; differences are multiplied by 10000 to obtain basis points.
+2015-01-31,-0.00187,decimal_fraction,-0.187,-0.0007699999999999,-7.699999999999998,10000.0,Values such as 0.03198 represent 3.198 percent; differences are multiplied by 10000 to obtain basis points.
+2015-02-28,-0.00229,decimal_fraction,-0.2289999999999999,-0.00042,-4.2,10000.0,Values such as 0.03198 represent 3.198 percent; differences are multiplied by 10000 to obtain basis points.
+```
 
 ## Descriptive Statistics
 
@@ -47,7 +66,7 @@ TTF_ret,"Log return, decimal form",145,0.0053508147619274,0.0074815131436705,0.1
 Brent_ret,"Log return, decimal form",145,0.000388825046507,0.012323128173624,0.1205662584484731,-0.7982438091599007,0.4903356742252684,-0.2295462802326778,-0.1665901942857977,-0.0580802466763827,0.0588516259067457,0.1579224623219771,0.2929776839552463,-1.4912241119171734,14.197830329071714,1181.9378369133244,2.215438700511247e-257,Log returns are stored in decimal form where applicable.
 Power_ret,"Log return, decimal form",145,0.0058609108524385,0.0045493396631539,0.0568807963859778,-0.2791247722440557,0.1792624535833837,-0.1724248626563859,-0.0727408546296061,-0.0216591625114146,0.0305274010677187,0.0930485151643018,0.1480535682054258,-0.7550340733709373,5.204375606091542,163.6619405733727,2.892418666975334e-36,Log returns are stored in decimal form where applicable.
 IP_growth,"Log growth, decimal form",145,0.0006931235975888,0.0010085729548849,0.0257534063625594,-0.2042244496781755,0.1235163743644847,-0.0766774792897743,-0.0180005578201608,-0.0042780813910781,0.008080852053939,0.0217211626640636,0.0691207654861026,-3.112719981734122,33.79258513578501,6649.144975240552,0.0,Log returns are stored in decimal form where applicable.
-Bund2Y_change_bps,Basis points,145,0.0171172413793103,0.0019999999999999,0.1856253882692641,-0.4550000000000002,0.92,-0.3971199999999999,-0.2518000000000019,-0.0679999999999899,0.07000000000001,0.4339999999999978,0.6224800000000001,1.4312849475258194,5.5237951356719694,217.8151669907073,5.0354402906764725e-48,Log returns are stored in decimal form where applicable.
+Bund2Y_change_bps,Basis points,145,1.7117241379310342,0.1999999999999918,18.562538826926417,-45.50000000000002,92.0,-39.712,-25.1800000000002,-6.799999999998994,7.000000000001003,43.39999999999978,62.24800000000002,1.4312849475258187,5.523795135671964,217.8151669907069,5.035440290677485e-48,Log returns are stored in decimal form where applicable.
 CPI_yoy_level,Percentage points,146,0.0254383561643835,0.0175,0.0273450424436438,-0.005,0.115,-0.00255,0.00025,0.0069999999999999,0.027,0.0975,0.1101,1.7584499529078492,2.455082238848806,106.75358746101998,6.587991363346598e-24,Log returns are stored in decimal form where applicable.
 CPI_yoy_change,Percentage points,145,0.0001793103448275,0.0,0.0039750418682582,-0.016,0.016,-0.01224,-0.005,-0.0019999999999999,0.002,0.0069999999999998,0.00912,-0.2319343827138114,3.833363729945385,82.26477064183604,1.3690900922934693e-18,Log returns are stored in decimal form where applicable.
 CISS_level,Index level,146,0.1079869863013698,0.0572,0.133156761783944,0.0013,0.696,0.0013,0.002875,0.014475,0.1431,0.377425,0.6339950000000008,2.093706952677506,5.006586776643157,244.40452052436723,8.476814744552348e-54,Log returns are stored in decimal form where applicable.
@@ -86,8 +105,8 @@ IP_growth,2020-04-30,-0.2042244496781755,-7.956911423324392,-21.99203352142152,a
 IP_growth,2020-05-31,0.1235163743644847,4.769204082666809,13.127495958837812,abs_z_score_gt_3;abs_modified_z_score_gt_3_5
 IP_growth,2020-06-30,0.0886581455791519,3.4156655140365237,9.392213370737734,abs_z_score_gt_3;abs_modified_z_score_gt_3_5
 IP_growth,2020-07-31,0.0442550090040398,1.691499943470844,4.634132748585365,abs_modified_z_score_gt_3_5
-Bund2Y_change_bps,2022-03-31,0.4589999999999999,2.380508198478239,4.40352142857207,abs_modified_z_score_gt_3_5
-Bund2Y_change_bps,2022-07-31,-0.368,-2.074701337839993,-3.565214285714804,abs_modified_z_score_gt_3_5
+Bund2Y_change_bps,2022-03-31,45.89999999999999,2.380508198478238,4.403521428572066,abs_modified_z_score_gt_3_5
+Bund2Y_change_bps,2022-07-31,-36.8,-2.074701337839992,-3.565214285714801,abs_modified_z_score_gt_3_5
 ```
 ... 102 additional rows in the CSV file.
 
@@ -162,7 +181,7 @@ data_model_diff,IP_growth,KPSS,stationarity around a constant,0.0906778634441104
 look-up table. The actual p-value is greater than the p-value returned.
 ",0.739,0.463,0.347
 data_model_diff,Bund2Y_change_bps,ADF,unit root,-11.8093572761584,8.936928428302814e-22,0,144,Reject unit root; stationary at 5%,,-3.476597917537401,-2.8818291230495543,-2.5775887982253085
-data_model_diff,Bund2Y_change_bps,Phillips-Perron,unit root,-12.67923827996719,1.196997253550556e-23,14,144,Reject unit root; stationary at 5%,,-3.476597917537401,-2.8818291230495543,-2.5775887982253085
+data_model_diff,Bund2Y_change_bps,Phillips-Perron,unit root,-12.679238279967196,1.1969972535505225e-23,14,144,Reject unit root; stationary at 5%,,-3.476597917537401,-2.8818291230495543,-2.5775887982253085
 data_model_diff,Bund2Y_change_bps,KPSS,stationarity around a constant,0.315729915010829,0.1,4,145,Fail to reject stationarity at 5%,"The test statistic is outside of the range of p-values available in the
 look-up table. The actual p-value is greater than the p-value returned.
 ",0.739,0.463,0.347
@@ -198,7 +217,7 @@ data_model_diff,CPI_yoy_change,6,99.32499421500296,3.4702751325276804e-19,no aut
 data_model_diff,CPI_yoy_change,12,128.4599382902375,1.2571446269600148e-21,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
 data_model_diff,IP_growth,6,21.254016198416014,0.0016514129762086,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
 data_model_diff,IP_growth,12,23.906066443149232,0.0209476808226593,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
-data_model_diff,Bund2Y_change_bps,12,29.264368307892905,0.0035989001458135,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
+data_model_diff,Bund2Y_change_bps,12,29.264368307892894,0.0035989001458135,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
 data_model_diff,CISS_change,6,16.026691108341048,0.0136114205462476,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
 data_model_diff,CISS_change,12,24.397733289792505,0.0179493078105154,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
 data_model_diff,GreenEquity_relative,6,14.328395839026449,0.0261753609549642,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
@@ -228,7 +247,7 @@ dataset,method,relationship,variable_1,variable_2,correlation,abs_correlation
 data_model_diff,pearson,TTF - Power,TTF_ret,Power_ret,0.2716458038487437,0.2716458038487437
 data_model_diff,pearson,TTF - Brent,TTF_ret,Brent_ret,0.164125323977503,0.164125323977503
 data_model_diff,pearson,Power - CPI,Power_ret,CPI_yoy_change,0.2879659399383766,0.2879659399383766
-data_model_diff,pearson,CPI - Bund 2Y,CPI_yoy_change,Bund2Y_change_bps,0.1988549363456888,0.1988549363456888
+data_model_diff,pearson,CPI - Bund 2Y,CPI_yoy_change,Bund2Y_change_bps,0.1988549363456887,0.1988549363456887
 data_model_diff,pearson,Green equity - green bond,GreenEquity_relative,GreenBond_relative,-0.0665937686561339,0.0665937686561339
 data_model_diff,spearman,TTF - Power,TTF_ret,Power_ret,0.2608290033065659,0.2608290033065659
 data_model_diff,spearman,TTF - Brent,TTF_ret,Brent_ret,0.1302432687765706,0.1302432687765706
@@ -238,7 +257,7 @@ data_model_diff,spearman,Green equity - green bond,GreenEquity_relative,GreenBon
 data_model_levels,pearson,TTF - Power,TTF_ret,Power_ret,0.2716458038487437,0.2716458038487437
 data_model_levels,pearson,TTF - Brent,TTF_ret,Brent_ret,0.164125323977503,0.164125323977503
 data_model_levels,pearson,Power - CPI,Power_ret,CPI_yoy_level,0.3316762435493738,0.3316762435493738
-data_model_levels,pearson,CPI - Bund 2Y,CPI_yoy_level,Bund2Y_change_bps,0.3814830093781017,0.3814830093781017
+data_model_levels,pearson,CPI - Bund 2Y,CPI_yoy_level,Bund2Y_change_bps,0.3814830093781019,0.3814830093781019
 data_model_levels,pearson,Green equity - green bond,GreenEquity_relative,GreenBond_relative,-0.0665937686561339,0.0665937686561339
 data_model_levels,spearman,TTF - Power,TTF_ret,Power_ret,0.2608290033065659,0.2608290033065659
 data_model_levels,spearman,TTF - Brent,TTF_ret,Brent_ret,0.1302432687765706,0.1302432687765706
@@ -257,7 +276,7 @@ Condition number diagnostics:
 
 ```csv
 dataset,condition_number,singular_values,note
-data_model_diff,2.2526062333051358,17.44668346;14.54578517;12.59874787;12.30903402;11.87725349;11.47519337;10.48447248;9.799821908;9.224748563;7.745110175,Variables were standardized temporarily only for this diagnostic.
+data_model_diff,2.252606233305136,17.44668346;14.54578517;12.59874787;12.30903402;11.87725349;11.47519337;10.48447248;9.799821908;9.224748563;7.745110175,Variables were standardized temporarily only for this diagnostic.
 data_model_levels,2.194284276897807,16.8006725;16.35975102;12.89766199;12.54130921;11.71559703;11.40336777;9.824074379;9.339322809;8.173829964;7.656561494,Variables were standardized temporarily only for this diagnostic.
 ```
 

@@ -2,7 +2,7 @@ dataset,method,relationship,variable_1,variable_2,correlation,abs_correlation
 data_model_diff,pearson,TTF - Power,TTF_ret,Power_ret,0.2716458038487437,0.2716458038487437
 data_model_diff,pearson,TTF - Brent,TTF_ret,Brent_ret,0.164125323977503,0.164125323977503
 data_model_diff,pearson,Power - CPI,Power_ret,CPI_yoy_change,0.2879659399383766,0.2879659399383766
-data_model_diff,pearson,CPI - Bund 2Y,CPI_yoy_change,Bund2Y_change_bps,0.19885493634568888,0.19885493634568888
+data_model_diff,pearson,CPI - Bund 2Y,CPI_yoy_change,Bund2Y_change_bps,0.19885493634568877,0.19885493634568877
 data_model_diff,pearson,Green equity - green bond,GreenEquity_relative,GreenBond_relative,-0.0665937686561339,0.0665937686561339
 data_model_diff,spearman,TTF - Power,TTF_ret,Power_ret,0.2608290033065659,0.2608290033065659
 data_model_diff,spearman,TTF - Brent,TTF_ret,Brent_ret,0.1302432687765706,0.1302432687765706
@@ -12,7 +12,7 @@ data_model_diff,spearman,Green equity - green bond,GreenEquity_relative,GreenBon
 data_model_levels,pearson,TTF - Power,TTF_ret,Power_ret,0.2716458038487437,0.2716458038487437
 data_model_levels,pearson,TTF - Brent,TTF_ret,Brent_ret,0.164125323977503,0.164125323977503
 data_model_levels,pearson,Power - CPI,Power_ret,CPI_yoy_level,0.33167624354937386,0.33167624354937386
-data_model_levels,pearson,CPI - Bund 2Y,CPI_yoy_level,Bund2Y_change_bps,0.38148300937810176,0.38148300937810176
+data_model_levels,pearson,CPI - Bund 2Y,CPI_yoy_level,Bund2Y_change_bps,0.3814830093781019,0.3814830093781019
 data_model_levels,pearson,Green equity - green bond,GreenEquity_relative,GreenBond_relative,-0.0665937686561339,0.0665937686561339
 data_model_levels,spearman,TTF - Power,TTF_ret,Power_ret,0.2608290033065659,0.2608290033065659
 data_model_levels,spearman,TTF - Brent,TTF_ret,Brent_ret,0.1302432687765706,0.1302432687765706

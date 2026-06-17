@@ -39,3 +39,6 @@ py run_analysis.py
 
 Log returns sunt pastrate in forma zecimala. De exemplu, `0.05` inseamna aproximativ `5%`.
 
+`Bund 2Y` este citit din Excel ca fractie zecimala a randamentului. De exemplu, `0.03198`
+inseamna `3.198%`, iar diferenta lunara este convertita in basis points cu multiplicatorul
+`10000`. Diagnosticul este salvat in `output/tables/bund2y_diagnostics.csv`.

@@ -114,7 +114,7 @@ RAW_UNITS = {
     "Brent": "Price level",
     "TTF": "Price level",
     "EUA": "Price level",
-    "Bund 2Y": "Percentage points",
+    "Bund 2Y": "Yield level, decimal fraction",
     "CPI EU": "Percentage points",
     "Industrial Production": "Index level",
     "CISS": "Index level",
@@ -209,4 +209,3 @@ def format_date(value: object) -> str:
     if pd.isna(value):
         return ""
     return pd.Timestamp(value).strftime("%Y-%m-%d")
-

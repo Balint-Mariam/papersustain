@@ -556,6 +556,7 @@ def generate_report() -> None:
     vif_diff_df = read_optional_csv(VIF_DIFF_TABLE)
     vif_levels_df = read_optional_csv(VIF_LEVELS_TABLE)
     condition_df = read_optional_csv(CONDITION_NUMBER_TABLE)
+    bund2y_diagnostics = read_optional_csv(TABLES_DIR / "bund2y_diagnostics.csv")
 
     missing_month_values = missing_months(raw_df[DATE_COL])
     missing_month_text = "None" if not missing_month_values else ", ".join(format_date(value) for value in missing_month_values)
@@ -613,7 +614,8 @@ Audit warnings:
 - Log returns are stored in decimal form. A value of `0.05` means approximately `5%`.
 - `EUA_ret`, `TTF_ret`, `Brent_ret`, and `Power_ret`: monthly log returns in decimal form.
 - `IP_growth`: approximate monthly industrial production growth in decimal form.
-- `Bund2Y_change_bps`: monthly change in basis points.
+- `Bund 2Y` is read from Excel as a decimal yield fraction in this file, for example `0.03198` means `3.198%`.
+- `Bund2Y_change_bps`: monthly change in basis points. The conversion multiplier is documented in `output/tables/bund2y_diagnostics.csv`.
 - `CPI_yoy_level`: annual inflation rate; `CPI_yoy_change`: monthly change in that annual inflation rate, in percentage points.
 - `CISS_level`: systemic stress index level; `CISS_change`: monthly change in systemic stress.
 - `GreenEquity_relative`: relative performance proxy versus the European broad equity market.
@@ -621,6 +623,10 @@ Audit warnings:
 - The two relative returns are not pure green premia, pure green-screening effects, or causal estimates of a green label.
 
 Transformation identity checks are saved in `output/tables/transformation_checks.csv`.
+
+Bund 2Y scale diagnostic:
+
+{csv_preview(bund2y_diagnostics.head(12) if not bund2y_diagnostics.empty else bund2y_diagnostics)}
 
 ## Descriptive Statistics
 
