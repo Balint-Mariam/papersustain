@@ -1,0 +1,2 @@
+initial_final_burnin,initial_final_draws,extended_final_burnin,extended_final_draws,reason
+10000,10000,20000,20000,"The initial full run produced max R-hat 1.0377 and minimum bulk ESS 539.8, so final chains were extended according to the stage-2 diagnostic rule."

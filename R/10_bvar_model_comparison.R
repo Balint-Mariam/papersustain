@@ -118,6 +118,7 @@ write_stage2_report <- function(comparison, recommendation) {
   lag_criteria <- read_csv_optional(file.path("output", "tables", "bvar", "lag_selection_criteria.csv"))
   var_stability <- read_csv_optional(file.path("output", "tables", "bvar", "var_stability.csv"))
   prior <- read_csv_optional(file.path("output", "tables", "bvar", "prior_specifications.csv"))
+  extension <- read_csv_optional(file.path("output", "tables", "bvar", "mcmc_extension_decision.csv"))
   mcmc <- read_csv_optional(file.path("output", "tables", "bvar", "mcmc_diagnostics.csv"))
   stability <- read_csv_optional(file.path("output", "tables", "bvar", "posterior_stability.csv"))
   residual <- read_csv_optional(file.path("output", "tables", "bvar", "bvar_residual_ljung_box.csv"))
@@ -147,6 +148,7 @@ write_stage2_report <- function(comparison, recommendation) {
     "Classical VAR(1) and VAR(2) are estimated only as reduced-form benchmarks.\n\n",
     csv_block(var_stability), "\n\n",
     "## Priors and MCMC Settings\n\n", csv_block(prior), "\n\n",
+    "MCMC extension decision:\n\n", csv_block(extension), "\n\n",
     "## MCMC Diagnostics\n\n", csv_block(mcmc), "\n\n",
     "## Posterior Stability\n\n", csv_block(stability), "\n\n",
     "## Residual Diagnostics\n\n", csv_block(residual), "\n\n",

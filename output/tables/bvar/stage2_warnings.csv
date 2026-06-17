@@ -1,37 +1,37 @@
 time,script,warning
-2026-06-17 13:04:25,package_check,package 'readr' was built under R version 4.4.3
-2026-06-17 13:04:25,package_check,package 'dplyr' was built under R version 4.4.3
-2026-06-17 13:04:25,package_check,package 'tidyr' was built under R version 4.4.3
-2026-06-17 13:04:25,package_check,package 'ggplot2' was built under R version 4.4.3
-2026-06-17 13:04:26,package_check,package 'vars' was built under R version 4.4.3
-2026-06-17 13:04:26,package_check,package 'strucchange' was built under R version 4.4.3
-2026-06-17 13:04:26,package_check,package 'zoo' was built under R version 4.4.3
-2026-06-17 13:04:26,package_check,package 'sandwich' was built under R version 4.4.3
-2026-06-17 13:04:26,package_check,package 'urca' was built under R version 4.4.3
-2026-06-17 13:04:26,package_check,package 'lmtest' was built under R version 4.4.3
-2026-06-17 13:04:26,package_check,package 'bayesianVARs' was built under R version 4.4.3
-2026-06-17 13:04:26,package_check,package 'posterior' was built under R version 4.4.3
-2026-06-17 13:04:26,package_check,package 'coda' was built under R version 4.4.3
-2026-06-17 13:04:26,package_check,package 'forecast' was built under R version 4.4.3
-2026-06-17 13:04:26,package_check,package 'tseries' was built under R version 4.4.3
-2026-06-17 13:04:26,package_check,package 'patchwork' was built under R version 4.4.3
-2026-06-17 13:04:27,06_lag_selection_var.R,NaNs produced
-2026-06-17 13:08:29,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
+2026-06-17 13:16:08,package_check,package 'readr' was built under R version 4.4.3
+2026-06-17 13:16:08,package_check,package 'dplyr' was built under R version 4.4.3
+2026-06-17 13:16:08,package_check,package 'tidyr' was built under R version 4.4.3
+2026-06-17 13:16:08,package_check,package 'ggplot2' was built under R version 4.4.3
+2026-06-17 13:16:08,package_check,package 'vars' was built under R version 4.4.3
+2026-06-17 13:16:08,package_check,package 'strucchange' was built under R version 4.4.3
+2026-06-17 13:16:08,package_check,package 'zoo' was built under R version 4.4.3
+2026-06-17 13:16:08,package_check,package 'sandwich' was built under R version 4.4.3
+2026-06-17 13:16:08,package_check,package 'urca' was built under R version 4.4.3
+2026-06-17 13:16:08,package_check,package 'lmtest' was built under R version 4.4.3
+2026-06-17 13:16:08,package_check,package 'bayesianVARs' was built under R version 4.4.3
+2026-06-17 13:16:09,package_check,package 'posterior' was built under R version 4.4.3
+2026-06-17 13:16:09,package_check,package 'coda' was built under R version 4.4.3
+2026-06-17 13:16:09,package_check,package 'forecast' was built under R version 4.4.3
+2026-06-17 13:16:09,package_check,package 'tseries' was built under R version 4.4.3
+2026-06-17 13:16:09,package_check,package 'patchwork' was built under R version 4.4.3
+2026-06-17 13:16:10,06_lag_selection_var.R,NaNs produced
+2026-06-17 13:23:45,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
     values including the error term, the full path of logvariances is needed,
     i.e. set 'sv_keep='all'' when calling bvar()!"
-2026-06-17 13:08:29,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
+2026-06-17 13:23:46,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
     values including the error term, the full path of logvariances is needed,
     i.e. set 'sv_keep='all'' when calling bvar()!"
-2026-06-17 13:08:30,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
+2026-06-17 13:23:48,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
     values including the error term, the full path of logvariances is needed,
     i.e. set 'sv_keep='all'' when calling bvar()!"
-2026-06-17 13:08:35,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
+2026-06-17 13:23:58,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
     values including the error term, the full path of logvariances is needed,
     i.e. set 'sv_keep='all'' when calling bvar()!"
-2026-06-17 13:08:38,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
+2026-06-17 13:24:05,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
     values including the error term, the full path of logvariances is needed,
     i.e. set 'sv_keep='all'' when calling bvar()!"
-2026-06-17 13:11:42,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
+2026-06-17 13:28:02,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
     values including the error term, the full path of logvariances is needed,
     i.e. set 'sv_keep='all'' when calling bvar()!"
-2026-06-17 13:12:04,renv_snapshot,"packages argument is set; type argument ""explicit"" will be ignored"
+2026-06-17 13:28:44,renv_snapshot,"packages argument is set; type argument ""explicit"" will be ignored"

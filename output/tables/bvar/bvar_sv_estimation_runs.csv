@@ -1,6 +1,6 @@
 model_id,lag,variance_type,run_type,chain,seed,burnin,draws,thin,elapsed_seconds,file
-BVAR-SV-p1-pilot,1,sv,pilot,NA,20361,2000,2000,1,8.654885053634644,output/models/bvar_sv_p1_pilot.rds
-BVAR-SV-p2-pilot,2,sv,pilot,NA,20362,2000,2000,1,14.709797859191895,output/models/bvar_sv_p2_pilot.rds
-BVAR-SV-final-chain1,1,sv,final,1,20361,10000,10000,1,38.108253955841064,output/models/bvar_sv_final_chain1.rds
-BVAR-SV-final-chain2,1,sv,final,2,20362,10000,10000,1,38.11475706100464,output/models/bvar_sv_final_chain2.rds
-BVAR-SV-final-chain3,1,sv,final,3,20363,10000,10000,1,41.61923408508301,output/models/bvar_sv_final_chain3.rds
+BVAR-SV-p1-pilot,1,sv,pilot,NA,20361,2000,2000,1,8.369157075881958,output/models/bvar_sv_p1_pilot.rds
+BVAR-SV-p2-pilot,2,sv,pilot,NA,20362,2000,2000,1,15.716938018798828,output/models/bvar_sv_p2_pilot.rds
+BVAR-SV-final-chain1,1,sv,final,1,20361,20000,20000,1,82.42339301109314,output/models/bvar_sv_final_chain1.rds
+BVAR-SV-final-chain2,1,sv,final,2,20362,20000,20000,1,76.92866110801697,output/models/bvar_sv_final_chain2.rds
+BVAR-SV-final-chain3,1,sv,final,3,20363,20000,20000,1,78.36194491386414,output/models/bvar_sv_final_chain3.rds

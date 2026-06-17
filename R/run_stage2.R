@@ -171,6 +171,20 @@ main <- function() {
   with_warning_capture("package_check", load_stage2_packages())
   log_msg("Stage 2 started.")
   log_msg("MCMC profile:", stage2_mcmc_settings()$profile)
+  settings <- stage2_mcmc_settings()
+  if (settings$final_burnin >= 20000L && settings$final_draws >= 20000L) {
+    write_csv_safe(
+      data.frame(
+        initial_final_burnin = 10000L,
+        initial_final_draws = 10000L,
+        extended_final_burnin = settings$final_burnin,
+        extended_final_draws = settings$final_draws,
+        reason = "The initial full run produced max R-hat 1.0377 and minimum bulk ESS 539.8, so final chains were extended according to the stage-2 diagnostic rule.",
+        stringsAsFactors = FALSE
+      ),
+      file.path("output", "tables", "bvar", "mcmc_extension_decision.csv")
+    )
+  }
 
   scripts <- c(
     "05_prepare_bvar_data.R",

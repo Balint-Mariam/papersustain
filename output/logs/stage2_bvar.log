@@ -1,95 +1,95 @@
-2026-06-17 13:04:25 - WARNING in package_check : package 'readr' was built under R version 4.4.3 
-2026-06-17 13:04:25 - WARNING in package_check : package 'dplyr' was built under R version 4.4.3 
-2026-06-17 13:04:25 - WARNING in package_check : package 'tidyr' was built under R version 4.4.3 
-2026-06-17 13:04:25 - WARNING in package_check : package 'ggplot2' was built under R version 4.4.3 
-2026-06-17 13:04:26 - WARNING in package_check : package 'vars' was built under R version 4.4.3 
-2026-06-17 13:04:26 - WARNING in package_check : package 'strucchange' was built under R version 4.4.3 
-2026-06-17 13:04:26 - WARNING in package_check : package 'zoo' was built under R version 4.4.3 
-2026-06-17 13:04:26 - WARNING in package_check : package 'sandwich' was built under R version 4.4.3 
-2026-06-17 13:04:26 - WARNING in package_check : package 'urca' was built under R version 4.4.3 
-2026-06-17 13:04:26 - WARNING in package_check : package 'lmtest' was built under R version 4.4.3 
-2026-06-17 13:04:26 - WARNING in package_check : package 'bayesianVARs' was built under R version 4.4.3 
-2026-06-17 13:04:26 - WARNING in package_check : package 'posterior' was built under R version 4.4.3 
-2026-06-17 13:04:26 - WARNING in package_check : package 'coda' was built under R version 4.4.3 
-2026-06-17 13:04:26 - WARNING in package_check : package 'forecast' was built under R version 4.4.3 
-2026-06-17 13:04:26 - WARNING in package_check : package 'tseries' was built under R version 4.4.3 
-2026-06-17 13:04:26 - WARNING in package_check : package 'patchwork' was built under R version 4.4.3 
-2026-06-17 13:04:26 - Stage 2 started. 
-2026-06-17 13:04:26 - MCMC profile: full 
-2026-06-17 13:04:26 - Running 05_prepare_bvar_data.R 
-2026-06-17 13:04:26 - Stage 2 data preparation started. 
-2026-06-17 13:04:27 - Rows: 145 
-2026-06-17 13:04:27 - Variables: EUA_ret, TTF_ret, Brent_ret, Power_ret, CPI_yoy_change, IP_growth, Bund2Y_change, CISS_change, GreenEquity_relative, GreenBond_relative 
-2026-06-17 13:04:27 - Bund 2Y is kept on raw numeric scale; no multiplication by 100 or 10000. 
-2026-06-17 13:04:27 - Stage 2 data preparation completed. 
-2026-06-17 13:04:27 - Running 06_lag_selection_var.R 
-2026-06-17 13:04:27 - Lag selection and VAR benchmark diagnostics started. 
-2026-06-17 13:04:27 - WARNING in 06_lag_selection_var.R : NaNs produced 
-2026-06-17 13:04:27 - Lag selection and VAR benchmark diagnostics completed. 
-2026-06-17 13:04:27 - Running 07_bvar_homoskedastic.R 
-2026-06-17 13:04:27 - BVAR homoskedastic estimation started. 
-2026-06-17 13:04:27 - Estimating BVAR-HOM-p1-pilot burnin= 2000 draws= 2000 
-2026-06-17 13:04:31 - Estimating BVAR-HOM-p2-pilot burnin= 2000 draws= 2000 
-2026-06-17 13:04:41 - Estimating BVAR-HOM-final-chain1 p= 1 burnin= 10000 draws= 10000 
-2026-06-17 13:05:00 - Estimating BVAR-HOM-final-chain2 p= 1 burnin= 10000 draws= 10000 
-2026-06-17 13:05:20 - Estimating BVAR-HOM-final-chain3 p= 1 burnin= 10000 draws= 10000 
-2026-06-17 13:05:41 - BVAR homoskedastic estimation completed. 
-2026-06-17 13:05:41 - Running 08_bvar_sv.R 
-2026-06-17 13:05:41 - BVAR-SV estimation started. 
-2026-06-17 13:05:41 - Estimating BVAR-SV-p1-pilot burnin= 2000 draws= 2000 sv_keep=all 
-2026-06-17 13:05:49 - Estimating BVAR-SV-p2-pilot burnin= 2000 draws= 2000 sv_keep=all 
-2026-06-17 13:06:04 - Estimating BVAR-SV-final-chain1 p= 1 burnin= 10000 draws= 10000 sv_keep=all 
-2026-06-17 13:06:42 - Estimating BVAR-SV-final-chain2 p= 1 burnin= 10000 draws= 10000 sv_keep=all 
-2026-06-17 13:07:20 - Estimating BVAR-SV-final-chain3 p= 1 burnin= 10000 draws= 10000 sv_keep=all 
-2026-06-17 13:08:02 - BVAR-SV estimation completed. 
-2026-06-17 13:08:02 - Running 09_bvar_diagnostics.R 
-2026-06-17 13:08:02 - BVAR diagnostics started. 
-2026-06-17 13:08:29 - WARNING in 09_bvar_diagnostics.R : Setting 'error_term=FALSE'! To calculate predicted historical
+2026-06-17 13:16:08 - WARNING in package_check : package 'readr' was built under R version 4.4.3 
+2026-06-17 13:16:08 - WARNING in package_check : package 'dplyr' was built under R version 4.4.3 
+2026-06-17 13:16:08 - WARNING in package_check : package 'tidyr' was built under R version 4.4.3 
+2026-06-17 13:16:08 - WARNING in package_check : package 'ggplot2' was built under R version 4.4.3 
+2026-06-17 13:16:08 - WARNING in package_check : package 'vars' was built under R version 4.4.3 
+2026-06-17 13:16:08 - WARNING in package_check : package 'strucchange' was built under R version 4.4.3 
+2026-06-17 13:16:08 - WARNING in package_check : package 'zoo' was built under R version 4.4.3 
+2026-06-17 13:16:08 - WARNING in package_check : package 'sandwich' was built under R version 4.4.3 
+2026-06-17 13:16:08 - WARNING in package_check : package 'urca' was built under R version 4.4.3 
+2026-06-17 13:16:08 - WARNING in package_check : package 'lmtest' was built under R version 4.4.3 
+2026-06-17 13:16:08 - WARNING in package_check : package 'bayesianVARs' was built under R version 4.4.3 
+2026-06-17 13:16:09 - WARNING in package_check : package 'posterior' was built under R version 4.4.3 
+2026-06-17 13:16:09 - WARNING in package_check : package 'coda' was built under R version 4.4.3 
+2026-06-17 13:16:09 - WARNING in package_check : package 'forecast' was built under R version 4.4.3 
+2026-06-17 13:16:09 - WARNING in package_check : package 'tseries' was built under R version 4.4.3 
+2026-06-17 13:16:09 - WARNING in package_check : package 'patchwork' was built under R version 4.4.3 
+2026-06-17 13:16:09 - Stage 2 started. 
+2026-06-17 13:16:09 - MCMC profile: full_extended_after_diagnostics 
+2026-06-17 13:16:09 - Running 05_prepare_bvar_data.R 
+2026-06-17 13:16:09 - Stage 2 data preparation started. 
+2026-06-17 13:16:09 - Rows: 145 
+2026-06-17 13:16:09 - Variables: EUA_ret, TTF_ret, Brent_ret, Power_ret, CPI_yoy_change, IP_growth, Bund2Y_change, CISS_change, GreenEquity_relative, GreenBond_relative 
+2026-06-17 13:16:09 - Bund 2Y is kept on raw numeric scale; no multiplication by 100 or 10000. 
+2026-06-17 13:16:09 - Stage 2 data preparation completed. 
+2026-06-17 13:16:09 - Running 06_lag_selection_var.R 
+2026-06-17 13:16:09 - Lag selection and VAR benchmark diagnostics started. 
+2026-06-17 13:16:10 - WARNING in 06_lag_selection_var.R : NaNs produced 
+2026-06-17 13:16:10 - Lag selection and VAR benchmark diagnostics completed. 
+2026-06-17 13:16:10 - Running 07_bvar_homoskedastic.R 
+2026-06-17 13:16:10 - BVAR homoskedastic estimation started. 
+2026-06-17 13:16:10 - Estimating BVAR-HOM-p1-pilot burnin= 2000 draws= 2000 
+2026-06-17 13:16:14 - Estimating BVAR-HOM-p2-pilot burnin= 2000 draws= 2000 
+2026-06-17 13:16:25 - Estimating BVAR-HOM-final-chain1 p= 1 burnin= 20000 draws= 20000 
+2026-06-17 13:17:10 - Estimating BVAR-HOM-final-chain2 p= 1 burnin= 20000 draws= 20000 
+2026-06-17 13:17:54 - Estimating BVAR-HOM-final-chain3 p= 1 burnin= 20000 draws= 20000 
+2026-06-17 13:18:38 - BVAR homoskedastic estimation completed. 
+2026-06-17 13:18:38 - Running 08_bvar_sv.R 
+2026-06-17 13:18:38 - BVAR-SV estimation started. 
+2026-06-17 13:18:38 - Estimating BVAR-SV-p1-pilot burnin= 2000 draws= 2000 sv_keep=all 
+2026-06-17 13:18:47 - Estimating BVAR-SV-p2-pilot burnin= 2000 draws= 2000 sv_keep=all 
+2026-06-17 13:19:03 - Estimating BVAR-SV-final-chain1 p= 1 burnin= 20000 draws= 20000 sv_keep=all 
+2026-06-17 13:20:25 - Estimating BVAR-SV-final-chain2 p= 1 burnin= 20000 draws= 20000 sv_keep=all 
+2026-06-17 13:21:42 - Estimating BVAR-SV-final-chain3 p= 1 burnin= 20000 draws= 20000 sv_keep=all 
+2026-06-17 13:23:00 - BVAR-SV estimation completed. 
+2026-06-17 13:23:00 - Running 09_bvar_diagnostics.R 
+2026-06-17 13:23:00 - BVAR diagnostics started. 
+2026-06-17 13:23:45 - WARNING in 09_bvar_diagnostics.R : Setting 'error_term=FALSE'! To calculate predicted historical
     values including the error term, the full path of logvariances is needed,
     i.e. set 'sv_keep='all'' when calling bvar()! 
-2026-06-17 13:08:29 - WARNING in 09_bvar_diagnostics.R : Setting 'error_term=FALSE'! To calculate predicted historical
+2026-06-17 13:23:46 - WARNING in 09_bvar_diagnostics.R : Setting 'error_term=FALSE'! To calculate predicted historical
     values including the error term, the full path of logvariances is needed,
     i.e. set 'sv_keep='all'' when calling bvar()! 
-2026-06-17 13:08:30 - WARNING in 09_bvar_diagnostics.R : Setting 'error_term=FALSE'! To calculate predicted historical
+2026-06-17 13:23:48 - WARNING in 09_bvar_diagnostics.R : Setting 'error_term=FALSE'! To calculate predicted historical
     values including the error term, the full path of logvariances is needed,
     i.e. set 'sv_keep='all'' when calling bvar()! 
-2026-06-17 13:08:35 - WARNING in 09_bvar_diagnostics.R : Setting 'error_term=FALSE'! To calculate predicted historical
+2026-06-17 13:23:58 - WARNING in 09_bvar_diagnostics.R : Setting 'error_term=FALSE'! To calculate predicted historical
     values including the error term, the full path of logvariances is needed,
     i.e. set 'sv_keep='all'' when calling bvar()! 
-2026-06-17 13:08:38 - WARNING in 09_bvar_diagnostics.R : Setting 'error_term=FALSE'! To calculate predicted historical
+2026-06-17 13:24:05 - WARNING in 09_bvar_diagnostics.R : Setting 'error_term=FALSE'! To calculate predicted historical
     values including the error term, the full path of logvariances is needed,
     i.e. set 'sv_keep='all'' when calling bvar()! 
-2026-06-17 13:09:16 - Forecast evaluation fit: BVAR-HOM-p1-forecast 
+2026-06-17 13:25:14 - Forecast evaluation fit: BVAR-HOM-p1-forecast 
 'stable=TRUE': Calling 'stable_bvar()' to discard those posterior
           draws that do not fulfill the stable criterion.
 
 4999/5000 stable posterior draws remaining for prediction!
-2026-06-17 13:09:26 - Forecast evaluation fit: BVAR-HOM-p2-forecast 
+2026-06-17 13:25:25 - Forecast evaluation fit: BVAR-HOM-p2-forecast 
 'stable=TRUE': Calling 'stable_bvar()' to discard those posterior
           draws that do not fulfill the stable criterion.
 
 4993/5000 stable posterior draws remaining for prediction!
-2026-06-17 13:09:53 - Forecast evaluation fit: BVAR-SV-p1-forecast 
+2026-06-17 13:25:52 - Forecast evaluation fit: BVAR-SV-p1-forecast 
 'stable=TRUE': Calling 'stable_bvar()' to discard those posterior
           draws that do not fulfill the stable criterion.
 
 5000/5000 stable posterior draws remaining for prediction!
-2026-06-17 13:10:12 - Forecast evaluation fit: BVAR-SV-p2-forecast 
+2026-06-17 13:26:12 - Forecast evaluation fit: BVAR-SV-p2-forecast 
 'stable=TRUE': Calling 'stable_bvar()' to discard those posterior
           draws that do not fulfill the stable criterion.
 
 5000/5000 stable posterior draws remaining for prediction!
-2026-06-17 13:11:42 - WARNING in 09_bvar_diagnostics.R : Setting 'error_term=FALSE'! To calculate predicted historical
+2026-06-17 13:28:02 - WARNING in 09_bvar_diagnostics.R : Setting 'error_term=FALSE'! To calculate predicted historical
     values including the error term, the full path of logvariances is needed,
     i.e. set 'sv_keep='all'' when calling bvar()! 
-2026-06-17 13:12:03 - BVAR diagnostics completed. 
-2026-06-17 13:12:03 - Running 10_bvar_model_comparison.R 
-2026-06-17 13:12:03 - BVAR model comparison started. 
-2026-06-17 13:12:04 - BVAR model comparison completed. 
-2026-06-17 13:12:04 - Updating renv.lock with installed package versions. 
-2026-06-17 13:12:04 - WARNING in renv_snapshot : packages argument is set; type argument "explicit" will be ignored 
+2026-06-17 13:28:43 - BVAR diagnostics completed. 
+2026-06-17 13:28:43 - Running 10_bvar_model_comparison.R 
+2026-06-17 13:28:43 - BVAR model comparison started. 
+2026-06-17 13:28:44 - BVAR model comparison completed. 
+2026-06-17 13:28:44 - Updating renv.lock with installed package versions. 
+2026-06-17 13:28:44 - WARNING in renv_snapshot : packages argument is set; type argument "explicit" will be ignored 
 - The lockfile is already up to date.
-2026-06-17 13:12:06 - Stage 2 completed. 
+2026-06-17 13:28:46 - Stage 2 completed. 
 
 === Stage 2 summary ===
 Models estimated:
@@ -115,9 +115,9 @@ Variance recommendation: BVAR-SV
 Stable draw percentages:
 - BVAR-HOM-p1-pilot: 100%
 - BVAR-HOM-p2-pilot: 99.75%
-- BVAR-HOM-final-chain1: 100%
-- BVAR-HOM-final-chain2: 99.98%
-- BVAR-HOM-final-chain3: 99.99%
+- BVAR-HOM-final-chain1: 99.98%
+- BVAR-HOM-final-chain2: 99.99%
+- BVAR-HOM-final-chain3: 99.98%
 - BVAR-SV-p1-pilot: 100%
 - BVAR-SV-p2-pilot: 100%
 - BVAR-SV-final-chain1: 100%
@@ -128,8 +128,8 @@ Stable draw percentages:
 - BVAR-SV-p1-forecast: 100%
 - BVAR-SV-p2-forecast: 100%
 
-Max R-hat: 1.037699 
-Min bulk ESS: 539.8308 
+Max R-hat: 1.012719 
+Min bulk ESS: 1044.09 
 Green-assets predictive log likelihood:
 - BVAR-HOM-p1-forecast: 52.252
 - BVAR-HOM-p2-forecast: 52.377
@@ -137,5 +137,25 @@ Green-assets predictive log likelihood:
 - BVAR-SV-p2-forecast: 77.99
 
 Warnings:
-- None recorded.
+- package 'readr' was built under R version 4.4.3
+- package 'dplyr' was built under R version 4.4.3
+- package 'tidyr' was built under R version 4.4.3
+- package 'ggplot2' was built under R version 4.4.3
+- package 'vars' was built under R version 4.4.3
+- package 'strucchange' was built under R version 4.4.3
+- package 'zoo' was built under R version 4.4.3
+- package 'sandwich' was built under R version 4.4.3
+- package 'urca' was built under R version 4.4.3
+- package 'lmtest' was built under R version 4.4.3
+- package 'bayesianVARs' was built under R version 4.4.3
+- package 'posterior' was built under R version 4.4.3
+- package 'coda' was built under R version 4.4.3
+- package 'forecast' was built under R version 4.4.3
+- package 'tseries' was built under R version 4.4.3
+- package 'patchwork' was built under R version 4.4.3
+- NaNs produced
+- Setting 'error_term=FALSE'! To calculate predicted historical
+    values including the error term, the full path of logvariances is needed,
+    i.e. set 'sv_keep='all'' when calling bvar()!
+- packages argument is set; type argument "explicit" will be ignored
 Reproduction command: Rscript R/run_stage2.R

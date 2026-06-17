@@ -206,9 +206,9 @@ stage2_mcmc_settings <- function() {
     ))
   }
   list(
-    profile = "full",
+    profile = "full_extended_after_diagnostics",
     pilot_burnin = 2000L, pilot_draws = 2000L,
-    final_burnin = 10000L, final_draws = 10000L,
+    final_burnin = 20000L, final_draws = 20000L,
     forecast_burnin = 5000L, forecast_draws = 5000L,
     thin = 1L
   )

@@ -1,5 +1,5 @@
 model_id,lag,variance_type,run_type,chain,seed,burnin,draws,thin,elapsed_seconds,file
-BVAR-HOM-p1-forecast,1,homoskedastic,forecast,NA,30001,5000,5000,1,9.036419153213501,output/models/bvar_hom_p1_forecast_train.rds
-BVAR-HOM-p2-forecast,2,homoskedastic,forecast,NA,30002,5000,5000,1,23.2933669090271,output/models/bvar_hom_p2_forecast_train.rds
-BVAR-SV-p1-forecast,1,sv,forecast,NA,30101,5000,5000,1,17.23990488052368,output/models/bvar_sv_p1_forecast_train.rds
-BVAR-SV-p2-forecast,2,sv,forecast,NA,30102,5000,5000,1,41.83261013031006,output/models/bvar_sv_p2_forecast_train.rds
+BVAR-HOM-p1-forecast,1,homoskedastic,forecast,NA,30001,5000,5000,1,9.349358081817627,output/models/bvar_hom_p1_forecast_train.rds
+BVAR-HOM-p2-forecast,2,homoskedastic,forecast,NA,30002,5000,5000,1,24.581085920333862,output/models/bvar_hom_p2_forecast_train.rds
+BVAR-SV-p1-forecast,1,sv,forecast,NA,30101,5000,5000,1,17.584146976470947,output/models/bvar_sv_p1_forecast_train.rds
+BVAR-SV-p2-forecast,2,sv,forecast,NA,30102,5000,5000,1,32.6747829914093,output/models/bvar_sv_p2_forecast_train.rds

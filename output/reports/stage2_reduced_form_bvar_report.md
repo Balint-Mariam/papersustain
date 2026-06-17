@@ -95,30 +95,37 @@ BVAR-SV-final-chain2,1,specify_prior_phi,HMP,0,10,specify_prior_sigma,cholesky,H
 BVAR-SV-final-chain3,1,specify_prior_phi,HMP,0,10,specify_prior_sigma,cholesky,HMP,TRUE,all,sv
 ```
 
+MCMC extension decision:
+
+```csv
+initial_final_burnin,initial_final_draws,extended_final_burnin,extended_final_draws,reason
+10000,10000,20000,20000,"The initial full run produced max R-hat 1.0377 and minimum bulk ESS 539.8, so final chains were extended according to the stage-2 diagnostic rule."
+```
+
 ## MCMC Diagnostics
 
 ```csv
 parameter,mean,sd,rhat,ess_bulk,ess_tail,mcse_mean,model_group,rhat_pass,bulk_ess_pass,tail_ess_pass
-own_lag1__EUA_ret,-0.03700481432932528,0.07672012733142518,1.0000389603391004,29382.800267948744,27980.55300214042,4.4760614319954415e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
-own_lag1__TTF_ret,-0.0243170561547621,0.07546103458883324,0.999955813502992,28742.30221686207,27930.47189301294,4.451050262815726e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
-own_lag1__Brent_ret,0.08749050685333593,0.08269508105023182,1.0000837154454985,23483.60178777233,28391.87516269321,5.39444381269058e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
-own_lag1__Power_ret,0.32866934400774356,0.08478249828964426,1.0001597456677604,11380.161498092662,12437.966304056734,8.002070076043497e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
-own_lag1__CPI_yoy_change,0.13506717048325734,0.15834324624786378,0.9999814356397334,18228.394603975892,22056.05755562637,0.0011890921910997,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
-own_lag1__IP_growth,0.0294985544344597,0.0760363816105594,1.0000686822504332,24224.07855684297,26405.31440370714,4.890802052137202e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
-own_lag1__Bund2Y_change,3.689620730426016e-4,0.17429051592459271,1.0001711865549163,29985.620226564,24973.714740675747,0.00101069465660326,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
-own_lag1__CISS_change,-0.15291073420756776,0.08054593412918688,1.000029227328398,20235.15484206132,25855.740357681927,5.660810956535466e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
-own_lag1__GreenEquity_relative,0.02866533617716599,0.07729147579861127,1.00005812424172,29464.173108948467,29222.020800232058,4.502213815589709e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
-own_lag1__GreenBond_relative,0.06559191430063921,0.16454689627929622,1.00017540144923,25177.630301088775,22622.619171727903,0.00105536334853927,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
-lag1__EUA_ret__to__GreenEquity_relative,-0.0112989295500569,0.02991559450952868,1.0001683100974168,27778.23672272989,27319.608983744623,1.7942631884987405e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
-lag1__TTF_ret__to__GreenEquity_relative,-0.00305049443674299,0.01795932777537314,1.0000522131762466,30412.261290189745,28601.81832489771,1.0297503577775796e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
-lag1__Brent_ret__to__GreenEquity_relative,-0.0043314900215405,0.02838219778359737,1.0000387354863245,29743.007360995896,24254.369339581444,1.6460416943652695e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
-lag1__Power_ret__to__GreenEquity_relative,0.00504461771989938,0.06528931587415535,1.000032147307548,29690.40237884365,27401.425742246985,3.78933202894112e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
-lag1__CPI_yoy_change__to__GreenEquity_relative,-0.08029620949432896,0.9168688607736222,1.000010505660551,29819.02309369958,27820.64197693276,0.00531128329504273,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
-lag1__IP_growth__to__GreenEquity_relative,0.03675025942580658,0.13313572529435844,0.9999824424726356,29475.318944051676,26926.054879411895,7.763829315452441e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
-lag1__Bund2Y_change__to__GreenEquity_relative,-0.6528239145663575,1.7826696267560709,1.0001316914886298,28021.77373752659,26479.22134278152,0.01065328772346925,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
-lag1__CISS_change__to__GreenEquity_relative,-0.00977405973424237,0.03746563224037665,1.0000768707928185,28666.92840163495,25739.0863505119,2.215176893549728e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
-intercept__GreenEquity_relative,0.0022693896781528,0.00516762089279085,0.9999826079867384,29185.55370874851,29050.38640101859,3.0256838326242128e-5,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
-lag1__EUA_ret__to__GreenBond_relative,-5.420863509079167e-5,0.00173081324451369,1.0002751597075594,28487.460349843135,25500.10038520737,1.0252240882764132e-5,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
+own_lag1__EUA_ret,-0.03642030707378812,0.07669166166309689,0.9999721619115222,55962.82301338947,55453.37868902379,3.2418255339660784e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
+own_lag1__TTF_ret,-0.02433289187489171,0.07533369237375158,1.0000019208746953,53864.20747348549,56989.131653201555,3.2451637145573364e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
+own_lag1__Brent_ret,0.08777376929261826,0.08170572418133407,1.000055374849327,49452.350935295945,56573.28460743426,3.674229280317407e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
+own_lag1__Power_ret,0.32800383563727403,0.08582596573693833,1.0000671655005406,19054.840557604428,18226.654871172508,6.395740973064432e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
+own_lag1__CPI_yoy_change,0.1347144545253731,0.15877023044775482,1.000007008625707,37097.78847952541,42786.88280860291,8.406006865011522e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
+own_lag1__IP_growth,0.02914039192125684,0.075577442364042,0.9999654361977298,45440.641796675896,51572.95524989388,3.548194393413566e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
+own_lag1__Bund2Y_change,-1.4411046086119014e-4,0.17481797927163562,1.0000061028110163,59852.73354021113,50137.39580449291,7.150667530006409e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
+own_lag1__CISS_change,-0.15290971155454738,0.08037144057065355,1.0000085296034984,38484.19709714641,41979.03987110581,4.092446880928605e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
+own_lag1__GreenEquity_relative,0.02864840144771616,0.07633308529028873,1.0000225037726935,59594.59454857497,58640.890786373704,3.127405192018663e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
+own_lag1__GreenBond_relative,0.06692129290301652,0.16419526272995136,1.000046429686224,49789.360820244925,47452.94790338198,7.442506374200103e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
+lag1__EUA_ret__to__GreenEquity_relative,-0.01123360041204136,0.02978863161672161,1.0001452971580616,55552.56960272928,49326.073584871214,1.2662622898288584e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
+lag1__TTF_ret__to__GreenEquity_relative,-0.00321092711425746,0.01773147295959747,0.9999901090653752,60378.03699475188,52308.97562343341,7.215968201548835e-5,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
+lag1__Brent_ret__to__GreenEquity_relative,-0.00413074260668799,0.02836253821123272,1.0000454115120363,60248.54421799819,53662.41335809747,1.1554741850038749e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
+lag1__Power_ret__to__GreenEquity_relative,0.00518105039237613,0.06464590628721742,0.9999988134602572,60086.58339276163,54415.098754202074,2.6371142555764985e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
+lag1__CPI_yoy_change__to__GreenEquity_relative,-0.07977968302217013,0.9132622328691614,1.0000979732241626,59401.12166642715,54281.28696975437,0.00374919277461031,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
+lag1__IP_growth__to__GreenEquity_relative,0.03769365321564634,0.132726220988728,1.000006442424553,58305.31138423448,57526.509162508555,5.497444747116109e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
+lag1__Bund2Y_change__to__GreenEquity_relative,-0.6543823502008791,1.7870657068511284,1.0000274664275342,57730.6540899837,51552.73283404517,0.00744463446444357,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
+lag1__CISS_change__to__GreenEquity_relative,-0.00975058828509681,0.03721615584615292,1.000011174023605,57004.65045525003,51414.76211682537,1.56031853277576e-4,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
+intercept__GreenEquity_relative,0.0022552796975546,0.00518368517777142,1.000036361818567,59822.47419374582,59302.85922765728,2.11973354867598e-5,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
+lag1__EUA_ret__to__GreenBond_relative,-4.9880142648432776e-5,0.00172592287574601,0.999992849836344,59529.54907163418,49817.132109902224,7.075067071093088e-6,BVAR-HOMOSKEDASTIC-final,TRUE,TRUE,TRUE
 ```
 
 ## Posterior Stability
@@ -127,14 +134,14 @@ lag1__EUA_ret__to__GreenBond_relative,-5.420863509079167e-5,0.00173081324451369,
 model_id,total_draws,stable_draws,unstable_draws,unstable_pct,warning,original_file,stable_file
 BVAR-HOM-p1-pilot,2000,2000,0,0,NA,output/models/bvar_hom_p1_pilot.rds,output/models/bvar_hom_p1_pilot_stable_draws.rds
 BVAR-HOM-p2-pilot,2000,1995,5,0.25,NA,output/models/bvar_hom_p2_pilot.rds,output/models/bvar_hom_p2_pilot_stable_draws.rds
-BVAR-HOM-final-chain1,10000,10000,0,0,NA,output/models/bvar_hom_final_chain1.rds,output/models/bvar_hom_final_chain1_stable_draws.rds
-BVAR-HOM-final-chain2,10000,9998,2,0.02,NA,output/models/bvar_hom_final_chain2.rds,output/models/bvar_hom_final_chain2_stable_draws.rds
-BVAR-HOM-final-chain3,10000,9999,1,0.01,NA,output/models/bvar_hom_final_chain3.rds,output/models/bvar_hom_final_chain3_stable_draws.rds
+BVAR-HOM-final-chain1,20000,19996,4,0.02,NA,output/models/bvar_hom_final_chain1.rds,output/models/bvar_hom_final_chain1_stable_draws.rds
+BVAR-HOM-final-chain2,20000,19998,2,0.01,NA,output/models/bvar_hom_final_chain2.rds,output/models/bvar_hom_final_chain2_stable_draws.rds
+BVAR-HOM-final-chain3,20000,19997,3,0.015,NA,output/models/bvar_hom_final_chain3.rds,output/models/bvar_hom_final_chain3_stable_draws.rds
 BVAR-SV-p1-pilot,2000,2000,0,0,NA,output/models/bvar_sv_p1_pilot.rds,output/models/bvar_sv_p1_pilot_stable_draws.rds
 BVAR-SV-p2-pilot,2000,2000,0,0,NA,output/models/bvar_sv_p2_pilot.rds,output/models/bvar_sv_p2_pilot_stable_draws.rds
-BVAR-SV-final-chain1,10000,10000,0,0,NA,output/models/bvar_sv_final_chain1.rds,output/models/bvar_sv_final_chain1_stable_draws.rds
-BVAR-SV-final-chain2,10000,10000,0,0,NA,output/models/bvar_sv_final_chain2.rds,output/models/bvar_sv_final_chain2_stable_draws.rds
-BVAR-SV-final-chain3,10000,10000,0,0,NA,output/models/bvar_sv_final_chain3.rds,output/models/bvar_sv_final_chain3_stable_draws.rds
+BVAR-SV-final-chain1,20000,20000,0,0,NA,output/models/bvar_sv_final_chain1.rds,output/models/bvar_sv_final_chain1_stable_draws.rds
+BVAR-SV-final-chain2,20000,20000,0,0,NA,output/models/bvar_sv_final_chain2.rds,output/models/bvar_sv_final_chain2_stable_draws.rds
+BVAR-SV-final-chain3,20000,20000,0,0,NA,output/models/bvar_sv_final_chain3.rds,output/models/bvar_sv_final_chain3_stable_draws.rds
 BVAR-HOM-p1-forecast,5000,4999,1,0.02,NA,output/models/bvar_hom_p1_forecast_train.rds,output/models/bvar_hom_p1_forecast_train_stable_draws.rds
 BVAR-HOM-p2-forecast,5000,4993,7,0.14,NA,output/models/bvar_hom_p2_forecast_train.rds,output/models/bvar_hom_p2_forecast_train_stable_draws.rds
 BVAR-SV-p1-forecast,5000,5000,0,0,NA,output/models/bvar_sv_p1_forecast_train.rds,output/models/bvar_sv_p1_forecast_train_stable_draws.rds
@@ -173,16 +180,16 @@ Stochastic volatility is residual covariance variation through time, not time va
 
 ```csv
 Date,variable,q05,q16,median,q84,q95,vol_p05,vol_p50,vol_p95
-2020-03-31,Brent_ret,0.21429734034100772,0.24464641835600637,0.3086169522807697,0.4069035648089865,0.4997110093256457,0.05848543214142712,0.08244349215681221,0.14495362437090825
-2022-08-31,Bund2Y_change,0.00331786348320351,0.00385076984571384,0.00495680504459214,0.00661085013347042,0.00823003837687083,3.5656566011782237e-4,8.704949042619583e-4,0.00370257559339835
-2020-03-31,CISS_change,0.18159158612594872,0.21549279557907244,0.2910573147938239,0.4147281360384004,0.5499015727685276,0.0076155900181717,0.04276643539293039,0.16356378598069238
-2023-03-31,CPI_yoy_change,0.0048455976448908,0.00548244091828772,0.00675022779769039,0.00855370678278805,0.0102539939126344,0.0018890736576366,0.00240004002633774,0.00571290262711045
-2016-12-31,EUA_ret,0.1253433844569137,0.1451131165361384,0.18528056575094665,0.2487289686498405,0.30879418706254946,0.05717705467627924,0.09625860540283536,0.15275587420805006
-2015-01-31,GreenBond_relative,0.00481407695533147,0.00560948138345641,0.0072389779918927,0.00963370198359712,0.01189239958276609,5.450373340663516e-4,0.00138100477400259,0.00617643558570271
-2026-03-31,GreenEquity_relative,0.0652483239840437,0.07414883547690455,0.0930668795345604,0.12317936812262471,0.15188943031168675,0.03377066502748625,0.05406623282155992,0.07579729770892513
-2020-04-30,IP_growth,0.07188053673876349,0.0831237460680274,0.10733303703097824,0.14525458575256076,0.18199963641801475,0.00521632421494102,0.0091626457590873,0.02798463072123431
-2024-04-30,Power_ret,0.08103772399062682,0.09417784462469152,0.12143674772450253,0.162644937180496,0.20324559285087215,0.01880909701936606,0.03739906005060217,0.08525962989819397
-2021-10-31,TTF_ret,0.23587135195517211,0.2682043004171005,0.3316788442235355,0.4216390909244844,0.5029134317239718,0.0784401432529596,0.13308276007723757,0.3026989890438629
+2020-03-31,Brent_ret,0.21404100785696412,0.24454246070787328,0.30681930604990015,0.4038104851274984,0.4953673023992759,0.05872953883075586,0.08259239149353148,0.14548623269462962
+2022-08-31,Bund2Y_change,0.00331894319939766,0.0038681539924771,0.00498771183835589,0.00667844155664985,0.00829493791756999,3.5753767247194407e-4,8.678138275429301e-4,0.00370170636017369
+2020-03-31,CISS_change,0.18077973692900087,0.2158114522374336,0.2909887956250271,0.41600573797858414,0.5436146039233947,0.00757520870637528,0.04297992733086001,0.16339200031474718
+2023-03-31,CPI_yoy_change,0.0048558071325253,0.00549966201384483,0.00677286076093825,0.00862252797107711,0.01029617702826006,0.00188726427674351,0.00239709571536362,0.00571348035670851
+2016-12-31,EUA_ret,0.1257493601820467,0.14479734295631522,0.18538861259615289,0.2482217023220747,0.3091111809311049,0.05723727086923883,0.09535418719327574,0.1525446652746531
+2015-01-31,GreenBond_relative,0.00481587319016601,0.00561547386373941,0.00727086178479937,0.00970759210804837,0.01202247190342153,5.414074692322345e-4,0.00137612138269406,0.00617755941413459
+2026-03-31,GreenEquity_relative,0.06535209045911941,0.07444828077433728,0.09361037525127693,0.12338063043740452,0.15266759770700225,0.03361803058165317,0.05402274515626431,0.07554551523430529
+2020-04-30,IP_growth,0.07203173235052646,0.08310611410596956,0.1072496198548482,0.14424773540541316,0.17967822498152597,0.00517665365957847,0.00919707598138095,0.02802708166576537
+2024-04-30,Power_ret,0.08100625803606469,0.09372426820391172,0.12099581823307408,0.1633842254758507,0.20458558848805616,0.0189769499526192,0.03763163056856699,0.08506737062617672
+2021-10-31,TTF_ret,0.23604319136162824,0.2677604653154917,0.3308217926256043,0.42055402420712673,0.5042693471962333,0.07804138430094648,0.1336755157371401,0.3011892559975058
 ```
 
 ## Predictive Evaluation
@@ -241,36 +248,36 @@ BVAR-HOM-p2-forecast,GreenBond_relative,7.6347328195766e-4,6.482883312112906e-4,
 
 ```csv
 model_id,variable,statistic,observed,simulated_median,simulated_q05,simulated_q95,posterior_predictive_p_value,note
-BVAR-HOM-final-chain1,EUA_ret,mean,0.01803712067175318,0.01794849931902223,-0.00413428928755472,0.04038148686901582,0.4979,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
-BVAR-HOM-final-chain1,EUA_ret,sd,0.1129269603411588,0.11522226691282678,0.10035346643362954,0.13214758109465372,0.5989,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
-BVAR-HOM-final-chain1,EUA_ret,skewness,-0.3505267463149478,0.00135889889962998,-0.3333355309443731,0.3277181924020614,0.9578,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
-BVAR-HOM-final-chain1,EUA_ret,kurtosis,3.9714158425924206,2.9171301463266435,2.445557014490972,3.6934255060054646,0.02,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
-BVAR-HOM-final-chain1,EUA_ret,minimum,-0.3101549283038394,-0.28189713313835707,-0.3803831101647046,-0.21177759394076845,0.701,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
-BVAR-HOM-final-chain1,EUA_ret,maximum,0.357766051521067,0.318810750520853,0.24727442381211776,0.4186411106061945,0.2333,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
-BVAR-HOM-final-chain1,EUA_ret,max_abs,0.357766051521067,0.33212463723358043,0.266124769719753,0.4272754254689337,0.3045,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
-BVAR-HOM-final-chain1,TTF_ret,mean,0.0058856742155128,0.00599252794410723,-0.03030134985642611,0.04207478317557677,0.5022,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
-BVAR-HOM-final-chain1,TTF_ret,sd,0.19081683396910917,0.19202643060176605,0.1681211559675048,0.22064727330272124,0.5316,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
-BVAR-HOM-final-chain1,TTF_ret,skewness,0.19326181324543804,-0.0078098358145179,-0.3464642328990122,0.3130598878182975,0.1503,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
-BVAR-HOM-final-chain1,TTF_ret,kurtosis,4.592058517224699,2.924649346575794,2.453274711722968,3.7251526954405887,0.0043,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
-BVAR-HOM-final-chain1,TTF_ret,minimum,-0.6514525981468875,-0.49966658335407466,-0.6717192905145705,-0.3810809324813268,0.9307,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
-BVAR-HOM-final-chain1,TTF_ret,maximum,0.6638984339451812,0.5056926932539862,0.3893937911182791,0.6722887585252202,0.0579,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
-BVAR-HOM-final-chain1,TTF_ret,max_abs,0.6638984339451812,0.5491120296217564,0.4379179495434168,0.712342673662093,0.1089,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
-BVAR-HOM-final-chain1,Brent_ret,mean,3.71576378684402e-4,5.671805613275945e-4,-0.02332536778126176,0.02421250827190627,0.5047,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
-BVAR-HOM-final-chain1,Brent_ret,sd,0.12098690483484108,0.12428942158474612,0.1082740314964723,0.14248952984590335,0.6284,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
-BVAR-HOM-final-chain1,Brent_ret,skewness,-1.4702329189713137,-9.433584190137508e-4,-0.3290338343200856,0.33315349270460837,1,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
-BVAR-HOM-final-chain1,Brent_ret,kurtosis,16.55613647235671,2.9200084599456817,2.453902738977957,3.702079219280456,0,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
-BVAR-HOM-final-chain1,Brent_ret,minimum,-0.7982438091599007,-0.3236117118742755,-0.4322126107532119,-0.24907410632661023,1,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
-BVAR-HOM-final-chain1,Brent_ret,maximum,0.49033567422526847,0.32556225654117493,0.24847217001635205,0.4337495275970449,0.012,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
+BVAR-HOM-final-chain1,EUA_ret,mean,0.01803712067175318,0.01795701725279744,-0.00404132732337474,0.04013854101253823,0.4973,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
+BVAR-HOM-final-chain1,EUA_ret,sd,0.1129269603411588,0.1150338038752578,0.10002802225233828,0.13208044671342825,0.5889,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
+BVAR-HOM-final-chain1,EUA_ret,skewness,-0.3505267463149478,9.088764000238158e-5,-0.3274401884736529,0.3302765734974568,0.9596,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
+BVAR-HOM-final-chain1,EUA_ret,kurtosis,3.9714158425924206,2.9142432412396024,2.444458691620119,3.678409908245802,0.0197,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
+BVAR-HOM-final-chain1,EUA_ret,minimum,-0.3101549283038394,-0.2814312471594219,-0.3807375239621964,-0.21074115715128044,0.7026,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
+BVAR-HOM-final-chain1,EUA_ret,maximum,0.357766051521067,0.31720057001454327,0.2477670613310323,0.4180138864380007,0.2321,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
+BVAR-HOM-final-chain1,EUA_ret,max_abs,0.357766051521067,0.33107689225580356,0.2651306624905507,0.4271024223581691,0.30085,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
+BVAR-HOM-final-chain1,TTF_ret,mean,0.0058856742155128,0.00586761100521573,-0.03080192022170341,0.04206238424194572,0.49945,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
+BVAR-HOM-final-chain1,TTF_ret,sd,0.19081683396910917,0.1924794996530015,0.1679010029675164,0.2205345487630948,0.54075,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
+BVAR-HOM-final-chain1,TTF_ret,skewness,0.19326181324543804,-0.01200147496103857,-0.3443069910408697,0.3178019247588278,0.149,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
+BVAR-HOM-final-chain1,TTF_ret,kurtosis,4.592058517224699,2.9208926442591503,2.4489175082664265,3.704598509965757,0.0033,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
+BVAR-HOM-final-chain1,TTF_ret,minimum,-0.6514525981468875,-0.49963505590280344,-0.6709997782703662,-0.38151615762771024,0.93115,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
+BVAR-HOM-final-chain1,TTF_ret,maximum,0.6638984339451812,0.5048928418647687,0.38959041227117885,0.6705581565529352,0.0554,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
+BVAR-HOM-final-chain1,TTF_ret,max_abs,0.6638984339451812,0.549414190894272,0.4390382209152999,0.7102521512907586,0.1075,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
+BVAR-HOM-final-chain1,Brent_ret,mean,3.71576378684402e-4,4.452355351128183e-4,-0.02322602506935093,0.02408227324064196,0.5019,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
+BVAR-HOM-final-chain1,Brent_ret,sd,0.12098690483484108,0.12393747813144146,0.10796231947245916,0.14253154204005944,0.6133,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
+BVAR-HOM-final-chain1,Brent_ret,skewness,-1.4702329189713137,5.13127300556884e-4,-0.3318596577083251,0.33143145304095756,1,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
+BVAR-HOM-final-chain1,Brent_ret,kurtosis,16.55613647235671,2.9069152356022308,2.4494787109360447,3.7036557637981864,0,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
+BVAR-HOM-final-chain1,Brent_ret,minimum,-0.7982438091599007,-0.32262758256085056,-0.43020063170953865,-0.2473255407445184,1,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
+BVAR-HOM-final-chain1,Brent_ret,maximum,0.49033567422526847,0.3229787370225833,0.24785806935889565,0.4330232409715816,0.01025,Replicated data are generated from fitted reduced-form predictions and posterior residual volatility.
 ```
 
 ## Model Comparison
 
 ```csv
 model,lag,variance_type,prior,stable_draws,unstable_pct,max_rhat,min_bulk_ess,residual_autocorrelation_rejections,squared_residual_autocorrelation_rejections,joint_log_predictive_likelihood,green_assets_log_predictive_likelihood,green_rmse_mean,green_mae_mean,green_coverage_68_mean,green_coverage_90_mean,estimation_time_seconds,warning
-BVAR-HOM-p1,1,homoskedastic,"HMP coefficients, HMP Cholesky covariance",2000,0,1.030420788305147,1016.6810971330924,12,12,220.18889721391668,52.252499296914536,0.04454843256132973,0.034271235733246946,0.7916666666666667,0.9583333333333333,3.935216903686523,NA
-BVAR-HOM-p2,2,homoskedastic,"HMP coefficients, HMP Cholesky covariance",1995,0.25,NA,NA,5,12,217.99315334831655,52.37653519103803,0.044648286444303846,0.034263189334072165,0.75,0.9583333333333333,9.80267882347107,NA
-BVAR-SV-p1,1,sv,"HMP coefficients, HMP Cholesky covariance",2000,0,1.037699459200929,539.830840100328,3,4,302.9184408647801,78.4439491357211,0.043280107113507306,0.03321590952093421,0.7083333333333333,0.9166666666666667,8.654885053634644,NA
-BVAR-SV-p2,2,sv,"HMP coefficients, HMP Cholesky covariance",2000,0,NA,NA,2,2,301.2823581687019,77.98962302548442,0.043722055292804714,0.03354443222408287,0.7083333333333333,0.9166666666666667,14.709797859191896,NA
+BVAR-HOM-p1,1,homoskedastic,"HMP coefficients, HMP Cholesky covariance",2000,0,1.010398341616695,2378.316842778751,12,12,220.18889721391668,52.252499296914536,0.04454843256132973,0.034271235733246946,0.7916666666666667,0.9583333333333333,4.073092937469482,NA
+BVAR-HOM-p2,2,homoskedastic,"HMP coefficients, HMP Cholesky covariance",1995,0.25,NA,NA,5,12,217.99315334831655,52.37653519103803,0.044648286444303846,0.034263189334072165,0.75,0.9583333333333333,10.719236850738524,NA
+BVAR-SV-p1,1,sv,"HMP coefficients, HMP Cholesky covariance",2000,0,1.0127192526358066,1044.0896210724854,4,4,302.9184408647801,78.4439491357211,0.043280107113507306,0.03321590952093421,0.7083333333333333,0.9166666666666667,8.369157075881958,NA
+BVAR-SV-p2,2,sv,"HMP coefficients, HMP Cholesky covariance",2000,0,NA,NA,4,2,301.2823581687019,77.98962302548442,0.043722055292804714,0.03354443222408287,0.7083333333333333,0.9166666666666667,15.716938018798828,NA
 ```
 
 ## Warnings
@@ -289,42 +296,42 @@ No structural shocks, sign restrictions, zero restrictions, narrative restrictio
 
 ## Execution Warnings
 
-`csv
+```csv
 time,script,warning
-2026-06-17T13:04:25Z,package_check,package 'readr' was built under R version 4.4.3
-2026-06-17T13:04:25Z,package_check,package 'dplyr' was built under R version 4.4.3
-2026-06-17T13:04:25Z,package_check,package 'tidyr' was built under R version 4.4.3
-2026-06-17T13:04:25Z,package_check,package 'ggplot2' was built under R version 4.4.3
-2026-06-17T13:04:26Z,package_check,package 'vars' was built under R version 4.4.3
-2026-06-17T13:04:26Z,package_check,package 'strucchange' was built under R version 4.4.3
-2026-06-17T13:04:26Z,package_check,package 'zoo' was built under R version 4.4.3
-2026-06-17T13:04:26Z,package_check,package 'sandwich' was built under R version 4.4.3
-2026-06-17T13:04:26Z,package_check,package 'urca' was built under R version 4.4.3
-2026-06-17T13:04:26Z,package_check,package 'lmtest' was built under R version 4.4.3
-2026-06-17T13:04:26Z,package_check,package 'bayesianVARs' was built under R version 4.4.3
-2026-06-17T13:04:26Z,package_check,package 'posterior' was built under R version 4.4.3
-2026-06-17T13:04:26Z,package_check,package 'coda' was built under R version 4.4.3
-2026-06-17T13:04:26Z,package_check,package 'forecast' was built under R version 4.4.3
-2026-06-17T13:04:26Z,package_check,package 'tseries' was built under R version 4.4.3
-2026-06-17T13:04:26Z,package_check,package 'patchwork' was built under R version 4.4.3
-2026-06-17T13:04:27Z,06_lag_selection_var.R,NaNs produced
-2026-06-17T13:08:29Z,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
+2026-06-17 13:16:08,package_check,package 'readr' was built under R version 4.4.3
+2026-06-17 13:16:08,package_check,package 'dplyr' was built under R version 4.4.3
+2026-06-17 13:16:08,package_check,package 'tidyr' was built under R version 4.4.3
+2026-06-17 13:16:08,package_check,package 'ggplot2' was built under R version 4.4.3
+2026-06-17 13:16:08,package_check,package 'vars' was built under R version 4.4.3
+2026-06-17 13:16:08,package_check,package 'strucchange' was built under R version 4.4.3
+2026-06-17 13:16:08,package_check,package 'zoo' was built under R version 4.4.3
+2026-06-17 13:16:08,package_check,package 'sandwich' was built under R version 4.4.3
+2026-06-17 13:16:08,package_check,package 'urca' was built under R version 4.4.3
+2026-06-17 13:16:08,package_check,package 'lmtest' was built under R version 4.4.3
+2026-06-17 13:16:08,package_check,package 'bayesianVARs' was built under R version 4.4.3
+2026-06-17 13:16:09,package_check,package 'posterior' was built under R version 4.4.3
+2026-06-17 13:16:09,package_check,package 'coda' was built under R version 4.4.3
+2026-06-17 13:16:09,package_check,package 'forecast' was built under R version 4.4.3
+2026-06-17 13:16:09,package_check,package 'tseries' was built under R version 4.4.3
+2026-06-17 13:16:09,package_check,package 'patchwork' was built under R version 4.4.3
+2026-06-17 13:16:10,06_lag_selection_var.R,NaNs produced
+2026-06-17 13:23:45,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
     values including the error term, the full path of logvariances is needed,
     i.e. set 'sv_keep='all'' when calling bvar()!"
-2026-06-17T13:08:29Z,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
+2026-06-17 13:23:46,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
     values including the error term, the full path of logvariances is needed,
     i.e. set 'sv_keep='all'' when calling bvar()!"
-2026-06-17T13:08:30Z,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
+2026-06-17 13:23:48,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
     values including the error term, the full path of logvariances is needed,
     i.e. set 'sv_keep='all'' when calling bvar()!"
-2026-06-17T13:08:35Z,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
+2026-06-17 13:23:58,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
     values including the error term, the full path of logvariances is needed,
     i.e. set 'sv_keep='all'' when calling bvar()!"
-2026-06-17T13:08:38Z,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
+2026-06-17 13:24:05,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
     values including the error term, the full path of logvariances is needed,
     i.e. set 'sv_keep='all'' when calling bvar()!"
-2026-06-17T13:11:42Z,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
+2026-06-17 13:28:02,09_bvar_diagnostics.R,"Setting 'error_term=FALSE'! To calculate predicted historical
     values including the error term, the full path of logvariances is needed,
     i.e. set 'sv_keep='all'' when calling bvar()!"
-2026-06-17T13:12:04Z,renv_snapshot,"packages argument is set; type argument ""explicit"" will be ignored"
-`
+2026-06-17 13:28:44,renv_snapshot,"packages argument is set; type argument ""explicit"" will be ignored"
+```
