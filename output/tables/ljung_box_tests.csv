@@ -11,8 +11,8 @@ data_model_diff,CPI_yoy_change,6,99.32499421500296,3.47027513252768e-19,no autoc
 data_model_diff,CPI_yoy_change,12,128.4599382902375,1.2571446269600147e-21,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
 data_model_diff,IP_growth,6,21.254016198416018,0.001651412976208614,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
 data_model_diff,IP_growth,12,23.906066443149232,0.02094768082265931,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
-data_model_diff,Bund2Y_change_bps,6,8.941651992417173,0.17688621180107428,no autocorrelation up to tested lag,Fail to reject no-autocorrelation at 5%
-data_model_diff,Bund2Y_change_bps,12,29.264368307893108,0.003598900145813311,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
+data_model_diff,Bund2Y_change_bps,6,8.941651992417132,0.17688621180107675,no autocorrelation up to tested lag,Fail to reject no-autocorrelation at 5%
+data_model_diff,Bund2Y_change_bps,12,29.264368307892905,0.003598900145813556,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
 data_model_diff,CISS_change,6,16.026691108341048,0.013611420546247689,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
 data_model_diff,CISS_change,12,24.397733289792505,0.0179493078105154,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
 data_model_diff,GreenEquity_relative,6,14.328395839026447,0.026175360954964238,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
@@ -31,8 +31,8 @@ data_model_levels,CPI_yoy_level,6,751.8657562034354,3.854131928450132e-159,no au
 data_model_levels,CPI_yoy_level,12,1101.8279611715702,2.351192934973095e-228,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
 data_model_levels,IP_growth,6,21.254016198416018,0.001651412976208614,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
 data_model_levels,IP_growth,12,23.906066443149232,0.02094768082265931,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
-data_model_levels,Bund2Y_change_bps,6,8.941651992417173,0.17688621180107428,no autocorrelation up to tested lag,Fail to reject no-autocorrelation at 5%
-data_model_levels,Bund2Y_change_bps,12,29.264368307893108,0.003598900145813311,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
+data_model_levels,Bund2Y_change_bps,6,8.941651992417132,0.17688621180107675,no autocorrelation up to tested lag,Fail to reject no-autocorrelation at 5%
+data_model_levels,Bund2Y_change_bps,12,29.264368307892905,0.003598900145813556,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
 data_model_levels,CISS_level,6,251.22139391912248,2.2485644338749913e-51,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
 data_model_levels,CISS_level,12,265.629160265662,7.463504826396455e-50,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
 data_model_levels,GreenEquity_relative,6,14.328395839026447,0.026175360954964238,no autocorrelation up to tested lag,Reject no-autocorrelation at 5%
